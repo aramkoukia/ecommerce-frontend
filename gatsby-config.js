@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/mini-gatsbyv2-material-kit-react`,
+  pathPrefix: '/mini-gatsbyv2-material-kit-react',
   siteMetadata: {
     title: 'Gatsby Default Starter',
   },
@@ -10,7 +10,7 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-material-ui',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-starter-default',
         short_name: 'starter',
@@ -22,4 +22,4 @@ module.exports = {
       },
     },
   ],
-}
+};

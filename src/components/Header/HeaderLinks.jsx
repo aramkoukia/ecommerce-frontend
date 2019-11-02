@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import React from "react";
 // react components for routing our app without refresh
 import { Link } from "gatsby";
@@ -107,6 +106,17 @@ function HeaderLinks({ ...props }) {
           >
             <FaInstagram/>
           </Button>
+        </Tooltip>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          title="Login"
+          placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
+          classes={{ tooltip: classes.tooltip }}
+        >
+            <Link to="/login-page" className={classes.navLink}>
+              Login
+            </Link>
         </Tooltip>
       </ListItem>
     </List>
