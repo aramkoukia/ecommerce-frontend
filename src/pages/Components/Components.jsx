@@ -1,34 +1,28 @@
 import React from 'react';
-// nodejs library that concatenates classes
 import classNames from 'classnames';
-// react components for routing our app without refresh
 import { Link } from 'gatsby';
-// @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
-// @material-ui/icons
-// core components
-import Header from 'components/Header/Header.jsx';
-import Footer from 'components/Footer/Footer.jsx';
-import GridContainer from 'components/Grid/GridContainer.jsx';
-import GridItem from 'components/Grid/GridItem.jsx';
-import Button from 'components/CustomButtons/Button.jsx';
-import Parallax from 'components/Parallax/Parallax.jsx';
-// sections for this page
-import HeaderLinks from 'components/Header/HeaderLinks.jsx';
-import componentsStyle from "assets/jss/material-kit-react/views/components.jsx";
-import SectionBasics from "./Sections/SectionBasics.jsx";
-import SectionNavbars from "./Sections/SectionNavbars.jsx";
-import SectionTabs from "./Sections/SectionTabs.jsx";
-import SectionPills from "./Sections/SectionPills.jsx";
-import SectionNotifications from "./Sections/SectionNotifications.jsx";
-import SectionTypography from "./Sections/SectionTypography.jsx";
-import SectionJavascript from "./Sections/SectionJavascript.jsx";
-import SectionCarousel from "./Sections/SectionCarousel.jsx";
-import SectionCompletedExamples from "./Sections/SectionCompletedExamples.jsx";
-import SectionLogin from "./Sections/SectionLogin.jsx";
-import SectionExamples from "./Sections/SectionExamples.jsx";
-import SectionDownload from "./Sections/SectionDownload.jsx";
-
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
+import GridContainer from 'components/Grid/GridContainer';
+import GridItem from 'components/Grid/GridItem';
+import Button from 'components/CustomButtons/Button';
+import Parallax from 'components/Parallax/Parallax';
+import HeaderLinks from 'components/Header/HeaderLinks';
+import componentsStyle from 'assets/jss/material-kit-react/views/components';
+import SectionBasics from './Sections/SectionBasics';
+import SectionNavbars from './Sections/SectionNavbars';
+import SectionTabs from './Sections/SectionTabs';
+import SectionPills from './Sections/SectionPills';
+import SectionNotifications from './Sections/SectionNotifications';
+import SectionTypography from './Sections/SectionTypography';
+import SectionJavascript from './Sections/SectionJavascript';
+import SectionCarousel from './Sections/SectionCarousel';
+import SectionCompletedExamples from './Sections/SectionCompletedExamples';
+import SectionLogin from './Sections/SectionLogin';
+import SectionExamples from './Sections/SectionExamples';
+import SectionDownload from './Sections/SectionDownload';
+import SectionCategories from './Sections/SectionCategories';
 
 class Components extends React.Component {
   render() {
@@ -51,9 +45,9 @@ class Components extends React.Component {
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
-                  <h1 className={classes.title}>LED Lights And Parts</h1>
+                  <h1 className={classes.title}>WORLD OF LED LIGHTS</h1>
                   <h3 className={classes.subtitle}>
-                    A Badass Material-UI Kit based on Material Design.
+                    Explore your lighting needs through LED Lights And Parts
                   </h3>
                 </div>
               </GridItem>
@@ -62,6 +56,7 @@ class Components extends React.Component {
         </Parallax>
 
         <div className={classNames(classes.main, classes.mainRaised)}>
+          <SectionCategories />
           <SectionBasics />
           <SectionNavbars />
           <SectionTabs />
