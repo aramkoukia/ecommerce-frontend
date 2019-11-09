@@ -22,11 +22,10 @@ import SectionCompletedExamples from './Sections/SectionCompletedExamples';
 import SectionLogin from './Sections/SectionLogin';
 import SectionExamples from './Sections/SectionExamples';
 import SectionDownload from './Sections/SectionDownload';
-import SectionCategories from './Sections/SectionCategories';
 
 class Components extends React.Component {
   render() {
-    const { classes, ...rest } = this.props;
+    const { classes, data, ...rest } = this.props;
     return (
       <div>
         <Header
@@ -56,7 +55,6 @@ class Components extends React.Component {
         </Parallax>
 
         <div className={classNames(classes.main, classes.mainRaised)}>
-          <SectionCategories />
           <SectionBasics />
           <SectionNavbars />
           <SectionTabs />

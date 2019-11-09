@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-const SectionCategories = ({ data }) => (
+const CategoriesSection = ({ data }) => (
   <div>
     Categories
     <div>
@@ -22,17 +22,4 @@ const SectionCategories = ({ data }) => (
   </div>
 );
 
-export default SectionCategories;
-
-export const pageQuery = graphql`
-  query SectionCategoriesQuery {
-    allStrapiCategory {
-      edges {
-        node {
-          id
-          Name
-        }
-      }
-    }
-  }
-`;
+export default CategoriesSection;

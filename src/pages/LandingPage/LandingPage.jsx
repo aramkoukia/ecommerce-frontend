@@ -18,18 +18,19 @@ import Button from 'components/CustomButtons/Button';
 import HeaderLinks from 'components/Header/HeaderLinks';
 import Parallax from 'components/Parallax/Parallax';
 
-import landingPageStyle from 'assets/jss/material-kit-react/views/landingPage.jsx';
+import landingPageStyle from 'assets/jss/material-kit-react/views/landingPage';
 
 // Sections for this page
-import ProductSection from './Sections/ProductSection.jsx';
-import TeamSection from './Sections/TeamSection.jsx';
-import WorkSection from './Sections/WorkSection.jsx';
+import ProductSection from './Sections/ProductSection';
+import TeamSection from './Sections/TeamSection';
+import WorkSection from './Sections/WorkSection';
+import CategoriesSection from './Sections/CategoriesSection';
 
 const dashboardRoutes = [];
 
 class LandingPage extends React.Component {
   render() {
-    const { classes, ...rest } = this.props;
+    const { classes, data, ...rest } = this.props;
     return (
       <div>
         <Header
@@ -72,6 +73,7 @@ class LandingPage extends React.Component {
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
+            <CategoriesSection data={data} />
             <ProductSection />
             <TeamSection />
             <WorkSection />
