@@ -6,10 +6,10 @@ import '../assets/scss/material-kit-react.scss';
 import 'typeface-roboto';
 import 'typeface-roboto-slab';
 // pages for this product
-import Components from './Components/Components.jsx';
-import LandingPage from './LandingPage/LandingPage.jsx';
-import ProfilePage from './ProfilePage/ProfilePage.jsx';
-import LoginPage from './LoginPage/LoginPage.jsx';
+import Components from './Components/Components';
+import LandingPage from './LandingPage/LandingPage';
+import ProfilePage from './ProfilePage/ProfilePage';
+import LoginPage from './LoginPage/LoginPage';
 
 const hist = createMemoryHistory();
 
