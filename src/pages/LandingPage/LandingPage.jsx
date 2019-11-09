@@ -1,24 +1,16 @@
 import React from 'react';
-// nodejs library that concatenates classes
 import classNames from 'classnames';
-// @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
-
-// @material-ui/icons
-
-// React icons
 import { FaPlay } from 'react-icons/fa';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import GridContainer from '../../components/Grid/GridContainer';
+import GridItem from '../../components/Grid/GridItem';
+import Button from '../../components/CustomButtons/Button';
+import HeaderLinks from '../../components/Header/HeaderLinks';
+import Parallax from '../../components/Parallax/Parallax';
 
-// core components
-import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
-import GridContainer from 'components/Grid/GridContainer';
-import GridItem from 'components/Grid/GridItem';
-import Button from 'components/CustomButtons/Button';
-import HeaderLinks from 'components/Header/HeaderLinks';
-import Parallax from 'components/Parallax/Parallax';
-
-import landingPageStyle from 'assets/jss/material-kit-react/views/landingPage';
+import landingPageStyle from '../../assets/jss/material-kit-react/views/landingPage';
 
 // Sections for this page
 import ProductSection from './Sections/ProductSection';
