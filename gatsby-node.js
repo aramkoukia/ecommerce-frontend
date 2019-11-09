@@ -19,25 +19,44 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const getCategories = makeRequest(graphql, `
-    {
-      allStrapiCategory {
-        edges {
-          node {
-            id,
-            Name
+      query {
+        categories: allStrapiCategory {
+          edges {
+            node {
+              id
+              Name
+            }
+          }
+        }
+        promotions: allStrapiPromotion {
+          edges {
+            node {
+              id
+              Title
+              Description
+            }
           }
         }
       }
-    }
     `).then((result) => {
     // Create pages for each article.
-    result.data.allStrapiCategory.edges.forEach(({ node }) => {
+    result.data.categories.edges.forEach(({ node }) => {
       createPage({
         path: `/${node.Name}`,
         component: path.resolve('src/pages/Category/Category.jsx'),
         context: {
           id: node.Name,
           name: node.Name,
+        },
+      });
+    });
+    result.data.promotions.edges.forEach(({ node }) => {
+      createPage({
+        path: `/${node.Name}`,
+        component: path.resolve('src/pages/Promotion/Promotion.jsx'),
+        context: {
+          id: node.Title,
+          name: node.Title,
         },
       });
     });

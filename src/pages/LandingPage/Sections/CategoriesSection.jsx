@@ -7,13 +7,13 @@ const CategoriesSection = ({ data }) => (
     Categories
     <div>
       <ul>
-        {data && data.allStrapiCategory.edges.map(document => (
+        {data && data.categories.edges.map(document => (
           <li key={document.node.id}>
             <h2>
               <Link to={`/${document.node.id}`}>{document.node.Name}</Link>
             </h2>
             <p>
-              {/* <Img fixed={document.node.Tumbnail}/> */}
+              {/* <Img fixed={document.node.Tumbnail} /> */}
             </p>
           </li>
         ))}

@@ -6,14 +6,22 @@ export default ({ data }) => (
   <LandingPage data={data} />
 );
 
-
 export const pageQuery = graphql`
-  query SectionCategoriesQuery {
-    allStrapiCategory {
+  query {
+    categories: allStrapiCategory {
       edges {
         node {
           id
           Name
+        }
+      }
+    }
+    promotions: allStrapiPromotion {
+      edges {
+        node {
+          id
+          Title
+          Description
         }
       }
     }

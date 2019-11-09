@@ -1,3 +1,3 @@
-const Category = () => 'Test';
+const Category = () => 'Category Test';
 
 export default Category;
