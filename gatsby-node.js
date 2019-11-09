@@ -33,10 +33,11 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiCategory.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.id}`,
+        path: `/${node.Name}`,
         component: path.resolve('src/pages/Category/Category.jsx'),
         context: {
-          id: node.id,
+          id: node.Name,
+          name: node.Name,
         },
       });
     });
