@@ -11,18 +11,14 @@ export default ProductsByCategoryTemplate;
 export const query = graphql`
   query ProductsByCategoryTemplate($id: String!) {
     strapiProducts(id: {eq: $id}) {
-      title
-      content
-      image {
-          childImageSharp {
-            fixed(width: 200, height: 125) {
-              ...GatsbyImageSharpFixed
-            }
-          }
+      edges {
+        node {
+          id
+          ProductCode
+          ProductName
+          ShortDescription
+          LongDescription
         }
-      author {
-        id
-        username
       }
     }
   }
