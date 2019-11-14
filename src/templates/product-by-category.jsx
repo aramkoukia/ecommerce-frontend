@@ -6,7 +6,7 @@ const ProductsByCategoryTemplate = ({ data }) => (
   <h1>Products By Category</h1>
 );
 
-export default ProductsByCategoryTemplate
+export default ProductsByCategoryTemplate;
 
 export const query = graphql`
   query ProductsByCategoryTemplate($id: String!) {
