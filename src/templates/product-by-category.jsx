@@ -8,18 +8,18 @@ const ProductsByCategoryTemplate = ({ data }) => (
 
 export default ProductsByCategoryTemplate;
 
-export const query = graphql`
-  query ProductsByCategoryTemplate($id: String!) {
-    strapiProducts(id: {eq: $id}) {
-      edges {
-        node {
-          id
-          ProductCode
-          ProductName
-          ShortDescription
-          LongDescription
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query ProductsByCategoryTemplate($id: String!) {
+//     strapiProducts(id: {eq: $id}) {
+//       edges {
+//         node {
+//           id
+//           ProductCode
+//           ProductName
+//           ShortDescription
+//           LongDescription
+//         }
+//       }
+//     }
+//   }
+// `;

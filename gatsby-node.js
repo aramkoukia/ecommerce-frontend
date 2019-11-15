@@ -37,17 +37,6 @@ exports.createPages = ({ actions, graphql }) => {
             }
           }
         }
-        products:  strapiProducts(id: {eq: $id}) {
-          edges {
-            node {
-              id
-              ProductCode
-              ProductName
-              ShortDescription
-              LongDescription
-            }
-          }
-        }
       }
     `).then((result) => {
     // Create pages for each article.
