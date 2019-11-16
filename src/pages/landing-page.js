@@ -13,10 +13,18 @@ export const pageQuery = graphql`
         node {
           id
           Name
+          Thumbnail {
+            url
+            name
+          }
           Products {
             ProductCode
             ProductName
             ShortDescription
+            Image {
+              url
+              name
+            }
           }
         }
       }

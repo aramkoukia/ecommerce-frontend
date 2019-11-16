@@ -25,10 +25,18 @@ exports.createPages = ({ actions, graphql }) => {
             node {
               id
               Name
+              Thumbnail {
+                url
+                name
+              }
               Products {
                 ProductCode
                 ProductName
                 ShortDescription
+                Image {
+                  id
+                  url
+                }
               }
             }
           }
