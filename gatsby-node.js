@@ -25,6 +25,11 @@ exports.createPages = ({ actions, graphql }) => {
             node {
               id
               Name
+              Products {
+                ProductCode
+                ProductName
+                ShortDescription
+              }
             }
           }
         }
@@ -42,21 +47,19 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.categories.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.Name}`,
-        component: path.resolve('src/pages/Category/Category.jsx'),
+        path: `/${node.id}`,
+        component: path.resolve('src/templates/product-by-category.jsx'),
         context: {
-          id: node.Name,
-          name: node.Name,
+          id: node.id,
         },
       });
     });
     result.data.promotions.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.Name}`,
+        path: `/${node.id}`,
         component: path.resolve('src/pages/Promotion/Promotion.jsx'),
         context: {
-          id: node.Title,
-          name: node.Title,
+          id: node.id,
         },
       });
     });
