@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const CategoryTemplate = ({ data }) => (
   <div>
@@ -8,13 +9,18 @@ const CategoryTemplate = ({ data }) => (
       {data && data.strapiCategory.Products.map(product => (
         <li key={product.ProductCode}>
           <h2>
+            {product.ProductCode}
             <Link to={`/${product.ProductName}`}>
-              {product.ProductCode}
               {product.ProductName}
             </Link>
+            {product.ShortDescription}
           </h2>
           <p>
-            {/* <Img fixed={document.node.Tumbnail} /> */}
+            url: {product.Image[0].url}
+          </p>
+          <p>
+            <img src={product.Image[0].url} alt={product.ProductName} />
+            <Img fixed={product.Image[0]} />
           </p>
         </li>
       ))}
