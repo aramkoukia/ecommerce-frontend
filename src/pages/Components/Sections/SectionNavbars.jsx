@@ -1,30 +1,30 @@
-import React from "react";
+import React from 'react';
 
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Icon from "@material-ui/core/Icon";
+import withStyles from '@material-ui/core/styles/withStyles';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import Icon from '@material-ui/core/Icon';
 // @material-ui/icons
-import Search from "@material-ui/icons/Search";
-import Email from "@material-ui/icons/Email";
-import Face from "@material-ui/icons/Face";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import Explore from "@material-ui/icons/Explore";
+import Search from '@material-ui/icons/Search';
+import Email from '@material-ui/icons/Email';
+import Face from '@material-ui/icons/Face';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import Explore from '@material-ui/icons/Explore';
 // React icons
 import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Header from "components/Header/Header.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
-import CustomDropdown from "components/CustomDropdown/CustomDropdown.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx';
+import GridItem from 'components/Grid/GridItem.jsx';
+import Header from 'components/Header/Header.jsx';
+import CustomInput from 'components/CustomInput/CustomInput.jsx';
+import CustomDropdown from 'components/CustomDropdown/CustomDropdown.jsx';
+import Button from 'components/CustomButtons/Button.jsx';
 
-import navbarsStyle from "assets/jss/material-kit-react/views/componentsSections/navbarsStyle.jsx";
+import navbarsStyle from 'assets/jss/material-kit-react/views/componentsSections/navbarsStyle.jsx';
 
-import image from "assets/img/bg.jpg";
-import profileImage from "assets/img/faces/avatar.jpg";
+import image from 'assets/img/bg.jpg';
+import profileImage from 'assets/img/faces/avatar.jpg';
 
 class SectionNavbars extends React.Component {
   render() {
@@ -40,7 +40,7 @@ class SectionNavbars extends React.Component {
               <Header
                 brand="Menu"
                 color="primary"
-                leftLinks={
+                leftLinks={(
                   <List className={classes.list}>
                     <ListItem className={classes.listItem}>
                       <Button
@@ -82,7 +82,7 @@ class SectionNavbars extends React.Component {
                       />
                     </ListItem>
                   </List>
-                }
+                )}
               />
             </GridItem>
             <GridItem xs={12} sm={12} md={6}>
@@ -92,7 +92,7 @@ class SectionNavbars extends React.Component {
               <Header
                 brand="Icons"
                 color="info"
-                rightLinks={
+                rightLinks={(
                   <List className={classes.list}>
                     <ListItem className={classes.listItem}>
                       <Button color="transparent" className={classes.navLink}>
@@ -126,7 +126,7 @@ class SectionNavbars extends React.Component {
                       />
                     </ListItem>
                   </List>
-                }
+                )}
               />
             </GridItem>
           </GridContainer>
@@ -137,12 +137,12 @@ class SectionNavbars extends React.Component {
         <div id="navbar" className={classes.navbar}>
           <div
             className={classes.navigation}
-            style={{ backgroundImage: "url(" + image + ")" }}
+            style={{ backgroundImage: 'url(' + image + ')' }}
           >
             <Header
               brand="Brand"
               color="rose"
-              leftLinks={
+              leftLinks={(
                 <List className={classes.list}>
                   <ListItem className={classes.listItem}>
                     <Button
@@ -165,8 +165,8 @@ class SectionNavbars extends React.Component {
                     </Button>
                   </ListItem>
                 </List>
-              }
-              rightLinks={
+              )}
+              rightLinks={(
                 <div>
                   <CustomInput
                     white
@@ -186,12 +186,12 @@ class SectionNavbars extends React.Component {
                     <Search className={classes.searchIcon} />
                   </Button>
                 </div>
-              }
+              )}
             />
             <Header
               brand="Info Color"
               color="info"
-              rightLinks={
+              rightLinks={(
                 <List className={classes.list}>
                   <ListItem className={classes.listItem}>
                     <Button
@@ -224,12 +224,12 @@ class SectionNavbars extends React.Component {
                     </Button>
                   </ListItem>
                 </List>
-              }
+              )}
             />
             <Header
               brand="Primary Color"
               color="primary"
-              rightLinks={
+              rightLinks={(
                 <List className={classes.list}>
                   <ListItem className={classes.listItem}>
                     <Button
@@ -262,12 +262,12 @@ class SectionNavbars extends React.Component {
                     </Button>
                   </ListItem>
                 </List>
-              }
+              )}
             />
             <Header
               brand="Navbar with notifications"
               color="dark"
-              rightLinks={
+              rightLinks={(
                 <List className={classes.list}>
                   <ListItem className={classes.listItem}>
                     <Button
@@ -327,11 +327,11 @@ class SectionNavbars extends React.Component {
                     />
                   </ListItem>
                 </List>
-              }
+              )}
             />
             <Header
               brand="Navbar with profile"
-              rightLinks={
+              rightLinks={(
                 <List className={classes.list}>
                   <ListItem className={classes.listItem}>
                     <Button
@@ -365,12 +365,12 @@ class SectionNavbars extends React.Component {
                     </Button>
                   </ListItem>
                 </List>
-              }
+              )}
             />
             <Header
               brand="Transparent"
               color="transparent"
-              rightLinks={
+              rightLinks={(
                 <List className={classes.list}>
                   <ListItem className={classes.listItem}>
                     <Button
@@ -406,7 +406,7 @@ class SectionNavbars extends React.Component {
                     </Button>
                   </ListItem>
                 </List>
-              }
+              )}
             />
           </div>
         </div>
