@@ -16,7 +16,9 @@ const CategoryTemplate = ({ data }) => (
             {product.ShortDescription}
           </h2>
           <p>
-            url: {product.Image[0].url}
+            url:
+            {' '}
+            {product.Image[0].url}
           </p>
           <p>
             <img src={product.Image[0].url} alt={product.ProductName} />

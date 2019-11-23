@@ -41,11 +41,11 @@ class LandingPage extends React.Component {
           <div className={classes.container}>
             <GridContainer>
               {data && data.promotions.edges.map(document => (
-                  <GridItem xs={12} sm={12} md={6}>
-                    <h1 className={classes.title}>{document.node.Title}</h1>
-                    <h4>{document.node.Description}</h4>
-                    <br />
-                    <Button
+                <GridItem xs={12} sm={12} md={6}>
+                  <h1 className={classes.title}>{document.node.Title}</h1>
+                  <h4>{document.node.Description}</h4>
+                  <br />
+                  <Button
                     color="danger"
                     size="lg"
                     href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -55,8 +55,8 @@ class LandingPage extends React.Component {
                     <FaPlay />
                     Watch video
                   </Button>
-                  </GridItem>
-                ))}
+                </GridItem>
+              ))}
             </GridContainer>
           </div>
         </Parallax>

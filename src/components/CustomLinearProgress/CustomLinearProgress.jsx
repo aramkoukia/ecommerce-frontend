@@ -14,8 +14,8 @@ function CustomLinearProgress({ ...props }) {
     <LinearProgress
       {...rest}
       classes={{
-        root: `${classes.root  } ${  classes[color + "Background"]}`,
-        bar: `${classes.bar  } ${  classes[color]}`,
+        root: `${classes.root} ${classes[`${color}Background`]}`,
+        bar: `${classes.bar} ${classes[color]}`,
       }}
     />
   );

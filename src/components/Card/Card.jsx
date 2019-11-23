@@ -12,8 +12,8 @@ import cardStyle from 'assets/jss/material-kit-react/components/cardStyle.jsx';
 
 function Card({ ...props }) {
   const {
- classes, className, children, plain, carousel, ...rest
-} = props;
+    classes, className, children, plain, carousel, ...rest
+  } = props;
   const cardClasses = classNames({
     [classes.card]: true,
     [classes.cardPlain]: plain,

@@ -1,27 +1,29 @@
-import React from "react";
+import React from 'react';
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames';
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles';
 
 // @material-ui/icons
 
 // React icons
-import { FaTwitter, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import {
+  FaTwitter, FaFacebook, FaInstagram, FaLinkedin,
+} from 'react-icons/fa';
 
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx';
+import GridItem from 'components/Grid/GridItem.jsx';
+import Button from 'components/CustomButtons/Button.jsx';
+import Card from 'components/Card/Card.jsx';
+import CardBody from 'components/Card/CardBody.jsx';
+import CardFooter from 'components/Card/CardFooter.jsx';
 
-import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
+import teamStyle from 'assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx';
 
-import team1 from "assets/img/faces/avatar.jpg";
-import team2 from "assets/img/faces/christian.jpg";
-import team3 from "assets/img/faces/kendall.jpg";
+import team1 from 'assets/img/faces/avatar.jpg';
+import team2 from 'assets/img/faces/christian.jpg';
+import team3 from 'assets/img/faces/kendall.jpg';
 
 class TeamSection extends React.Component {
   render() {
@@ -29,7 +31,7 @@ class TeamSection extends React.Component {
     const imageClasses = classNames(
       classes.imgRaised,
       classes.imgRoundedCircle,
-      classes.imgFluid
+      classes.imgFluid,
     );
     return (
       <div className={classes.section}>
@@ -50,7 +52,11 @@ class TeamSection extends React.Component {
                   <p className={classes.description}>
                     You can write here details about one of your team members.
                     You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
+                    add some
+                    {' '}
+                    <a href="#pablo">links</a>
+                    {' '}
+for people to be able to
                     follow them outside the site.
                   </p>
                 </CardBody>
@@ -60,21 +66,21 @@ class TeamSection extends React.Component {
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaTwitter/>
+                    <FaTwitter />
                   </Button>
                   <Button
                     justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaInstagram/>
+                    <FaInstagram />
                   </Button>
                   <Button
                     justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaFacebook/>
+                    <FaFacebook />
                   </Button>
                 </CardFooter>
               </Card>
@@ -93,7 +99,11 @@ class TeamSection extends React.Component {
                   <p className={classes.description}>
                     You can write here details about one of your team members.
                     You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
+                    add some
+                    {' '}
+                    <a href="#pablo">links</a>
+                    {' '}
+for people to be able to
                     follow them outside the site.
                   </p>
                 </CardBody>
@@ -103,14 +113,14 @@ class TeamSection extends React.Component {
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaTwitter/>
+                    <FaTwitter />
                   </Button>
                   <Button
                     justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaLinkedin/>
+                    <FaLinkedin />
                   </Button>
                 </CardFooter>
               </Card>
@@ -129,7 +139,11 @@ class TeamSection extends React.Component {
                   <p className={classes.description}>
                     You can write here details about one of your team members.
                     You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
+                    add some
+                    {' '}
+                    <a href="#pablo">links</a>
+                    {' '}
+for people to be able to
                     follow them outside the site.
                   </p>
                 </CardBody>
@@ -139,21 +153,21 @@ class TeamSection extends React.Component {
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaTwitter/>
+                    <FaTwitter />
                   </Button>
                   <Button
                     justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaInstagram/>
+                    <FaInstagram />
                   </Button>
                   <Button
                     justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaFacebook/>
+                    <FaFacebook />
                   </Button>
                 </CardFooter>
               </Card>

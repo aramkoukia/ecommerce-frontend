@@ -12,8 +12,8 @@ import cardBodyStyle from 'assets/jss/material-kit-react/components/cardBodyStyl
 
 function CardBody({ ...props }) {
   const {
- classes, className, children, ...rest
-} = props;
+    classes, className, children, ...rest
+  } = props;
   const cardBodyClasses = classNames({
     [classes.cardBody]: true,
     [className]: className !== undefined,

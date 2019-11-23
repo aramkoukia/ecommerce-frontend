@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles';
 
 // @material-ui/icons
 
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx';
+import GridItem from 'components/Grid/GridItem.jsx';
+import CustomInput from 'components/CustomInput/CustomInput.jsx';
+import Button from 'components/CustomButtons/Button.jsx';
 
-import workStyle from "assets/jss/material-kit-react/views/landingPageSections/workStyle.jsx";
+import workStyle from 'assets/jss/material-kit-react/views/landingPageSections/workStyle.jsx';
 
 class WorkSection extends React.Component {
   render() {
@@ -33,7 +33,7 @@ class WorkSection extends React.Component {
                     labelText="Your Name"
                     id="name"
                     formControlProps={{
-                      fullWidth: true
+                      fullWidth: true,
                     }}
                   />
                 </GridItem>
@@ -42,7 +42,7 @@ class WorkSection extends React.Component {
                     labelText="Your Email"
                     id="email"
                     formControlProps={{
-                      fullWidth: true
+                      fullWidth: true,
                     }}
                   />
                 </GridItem>
@@ -51,11 +51,11 @@ class WorkSection extends React.Component {
                   id="message"
                   formControlProps={{
                     fullWidth: true,
-                    className: classes.textArea
+                    className: classes.textArea,
                   }}
                   inputProps={{
                     multiline: true,
-                    rows: 5
+                    rows: 5,
                   }}
                 />
                 <GridContainer justify="center">

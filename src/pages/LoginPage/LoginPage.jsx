@@ -38,7 +38,7 @@ class LoginPage extends React.Component {
     // we add a hidden class to the card and after 700 ms we delete it and the transition appears
     setTimeout(
       () => {
-        this.setState({ cardAnimaton: "" });
+        this.setState({ cardAnimaton: '' });
       },
       700,
     );
@@ -58,7 +58,7 @@ class LoginPage extends React.Component {
         <div
           className={classes.pageHeader}
           style={{
-            backgroundImage: 'url(' + image + ')',
+            backgroundImage: `url(${image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'top center',
           }}

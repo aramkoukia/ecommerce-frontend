@@ -67,16 +67,16 @@ class SectionNavbars extends React.Component {
                         dropdownHeader="Dropdown Header"
                         buttonProps={{
                           className: classes.navLink,
-                          color: "transparent"
+                          color: 'transparent',
                         }}
                         dropdownList={[
-                          "Action",
-                          "Another action",
-                          "Something else here",
+                          'Action',
+                          'Another action',
+                          'Something else here',
                           { divider: true },
-                          "Separated link",
+                          'Separated link',
                           { divider: true },
-                          "One more separated link"
+                          'One more separated link',
                         ]}
                       />
                     </ListItem>
@@ -111,16 +111,16 @@ class SectionNavbars extends React.Component {
                         buttonIcon="settings"
                         buttonProps={{
                           className: classes.navLink,
-                          color: "transparent"
+                          color: 'transparent',
                         }}
                         dropdownList={[
-                          "Action",
-                          "Another action",
-                          "Something else here",
+                          'Action',
+                          'Another action',
+                          'Something else here',
                           { divider: true },
-                          "Separated link",
+                          'Separated link',
                           { divider: true },
-                          "One more separated link"
+                          'One more separated link',
                         ]}
                       />
                     </ListItem>
@@ -136,7 +136,7 @@ class SectionNavbars extends React.Component {
         <div id="navbar" className={classes.navbar}>
           <div
             className={classes.navigation}
-            style={{ backgroundImage: 'url(' + image + ')' }}
+            style={{ backgroundImage: `url(${image})` }}
           >
             <Header
               brand="Brand"
@@ -171,14 +171,14 @@ class SectionNavbars extends React.Component {
                     white
                     inputRootCustomClasses={classes.inputRootCustomClasses}
                     formControlProps={{
-                      className: classes.formControl
+                      className: classes.formControl,
                     }}
                     inputProps={{
-                      placeholder: "Search",
+                      placeholder: 'Search',
                       inputProps: {
-                        "aria-label": "Search",
-                        className: classes.searchInput
-                      }
+                        'aria-label': 'Search',
+                        className: classes.searchInput,
+                      },
                     }}
                   />
                   <Button justIcon round color="white">
@@ -195,7 +195,7 @@ class SectionNavbars extends React.Component {
                   <ListItem className={classes.listItem}>
                     <Button
                       href="#pablo"
-                      className={classes.navLink + " " + classes.navLinkActive}
+                      className={`${classes.navLink} ${classes.navLinkActive}`}
                       onClick={e => e.preventDefault()}
                       color="transparent"
                     >
@@ -233,11 +233,13 @@ class SectionNavbars extends React.Component {
                   <ListItem className={classes.listItem}>
                     <Button
                       href="#pablo"
-                      className={classes.navLink + " " + classes.navLinkActive}
+                      className={`${classes.navLink} ${classes.navLinkActive}`}
                       onClick={e => e.preventDefault()}
                       color="transparent"
                     >
-                      <Explore className={classes.icons} /> Discover
+                      <Explore className={classes.icons} />
+                      {' '}
+Discover
                     </Button>
                   </ListItem>
                   <ListItem className={classes.listItem}>
@@ -247,7 +249,9 @@ class SectionNavbars extends React.Component {
                       onClick={e => e.preventDefault()}
                       color="transparent"
                     >
-                      <AccountCircle className={classes.icons} /> Profile
+                      <AccountCircle className={classes.icons} />
+                      {' '}
+Profile
                     </Button>
                   </ListItem>
                   <ListItem className={classes.listItem}>
@@ -257,7 +261,9 @@ class SectionNavbars extends React.Component {
                       onClick={e => e.preventDefault()}
                       color="transparent"
                     >
-                      <Icon className={classes.icons}>settings</Icon> Settings
+                      <Icon className={classes.icons}>settings</Icon>
+                      {' '}
+Settings
                     </Button>
                   </ListItem>
                 </List>
@@ -306,22 +312,22 @@ class SectionNavbars extends React.Component {
                       caret={false}
                       hoverColor="black"
                       dropdownHeader="Dropdown Header"
-                      buttonText={
+                      buttonText={(
                         <img
                           src={profileImage}
                           className={classes.img}
                           alt="profile"
                         />
-                      }
+                      )}
                       buttonProps={{
                         className:
-                          classes.navLink + " " + classes.imageDropdownButton,
-                        color: "transparent"
+                          `${classes.navLink} ${classes.imageDropdownButton}`,
+                        color: 'transparent',
                       }}
                       dropdownList={[
-                        "Me",
-                        "Settings and other stuff",
-                        "Sign out"
+                        'Me',
+                        'Settings and other stuff',
+                        'Sign out',
                       ]}
                     />
                   </ListItem>
@@ -375,10 +381,11 @@ class SectionNavbars extends React.Component {
                     <Button
                       color="transparent"
                       className={
-                        classes.navLink + " " + classes.socialIconsButton
+                        `${classes.navLink} ${classes.socialIconsButton}`
                       }
                     >
-                      <FaTwitter className={classes.marginRight5}/>{" "}
+                      <FaTwitter className={classes.marginRight5} />
+                      {' '}
                       Twitter
                     </Button>
                   </ListItem>
@@ -386,10 +393,11 @@ class SectionNavbars extends React.Component {
                     <Button
                       color="transparent"
                       className={
-                        classes.navLink + " " + classes.socialIconsButton
+                        `${classes.navLink} ${classes.socialIconsButton}`
                       }
                     >
-                      <FaFacebook className={classes.marginRight5}/>{" "}
+                      <FaFacebook className={classes.marginRight5} />
+                      {' '}
                       Facebook
                     </Button>
                   </ListItem>
@@ -397,10 +405,11 @@ class SectionNavbars extends React.Component {
                     <Button
                       color="transparent"
                       className={
-                        classes.navLink + " " + classes.socialIconsButton
+                        `${classes.navLink} ${classes.socialIconsButton}`
                       }
                     >
-                      <FaInstagram className={classes.marginRight5}/>{" "}
+                      <FaInstagram className={classes.marginRight5} />
+                      {' '}
                       Instagram
                     </Button>
                   </ListItem>

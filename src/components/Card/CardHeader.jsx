@@ -12,11 +12,11 @@ import cardHeaderStyle from 'assets/jss/material-kit-react/components/cardHeader
 
 function CardHeader({ ...props }) {
   const {
- classes, className, children, color, plain, ...rest
-} = props;
+    classes, className, children, color, plain, ...rest
+  } = props;
   const cardHeaderClasses = classNames({
     [classes.cardHeader]: true,
-    [classes[`${color  }CardHeader`]]: color,
+    [classes[`${color}CardHeader`]]: color,
     [classes.cardHeaderPlain]: plain,
     [className]: className !== undefined,
   });

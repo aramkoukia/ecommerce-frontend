@@ -12,8 +12,8 @@ import cardFooterStyle from 'assets/jss/material-kit-react/components/cardFooter
 
 function CardFooter({ ...props }) {
   const {
- classes, className, children, ...rest
-} = props;
+    classes, className, children, ...rest
+  } = props;
   const cardFooterClasses = classNames({
     [classes.cardFooter]: true,
     [className]: className !== undefined,
