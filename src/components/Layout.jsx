@@ -6,7 +6,7 @@ import Footer from './Footer/Footer';
 const Layout = props => (
   <div>
     <Header
-      color="primary"
+      color="transparent"
       brand="LED Lights And Parts"
       rightLinks={<HeaderLinks />}
       fixed
@@ -15,7 +15,7 @@ const Layout = props => (
         color: 'white',
       }}
     />
-    { props }
+    { props.children }
     <Footer />
   </div>
 );

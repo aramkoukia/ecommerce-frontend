@@ -2,13 +2,11 @@ import React from 'react';
 import classNames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { FaPlay } from 'react-icons/fa';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import Button from '../../components/CustomButtons/Button';
-import HeaderLinks from '../../components/Header/HeaderLinks';
 import Parallax from '../../components/Parallax/Parallax';
+import Layout from '../../components/Layout';
 
 import landingPageStyle from '../../assets/jss/material-kit-react/views/landingPage';
 
@@ -18,25 +16,11 @@ import TeamSection from './Sections/TeamSection';
 import WorkSection from './Sections/WorkSection';
 import CategoriesSection from './Sections/CategoriesSection';
 
-const dashboardRoutes = [];
-
 class LandingPage extends React.Component {
   render() {
-    const { classes, data, ...rest } = this.props;
+    const { classes, data } = this.props;
     return (
-      <div>
-        <Header
-          color="transparent"
-          routes={dashboardRoutes}
-          brand="LED Lights And Parts"
-          rightLinks={<HeaderLinks />}
-          fixed
-          changeColorOnScroll={{
-            height: 400,
-            color: 'white',
-          }}
-          {...rest}
-        />
+      <Layout>
         <Parallax filter image={require('assets/img/landing-bg.jpg')}>
           <div className={classes.container}>
             <GridContainer>
@@ -68,8 +52,7 @@ class LandingPage extends React.Component {
             <WorkSection />
           </div>
         </div>
-        <Footer />
-      </div>
+      </Layout>
     );
   }
 }
