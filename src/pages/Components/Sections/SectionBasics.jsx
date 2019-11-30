@@ -16,15 +16,15 @@ import FiberManualRecord from '@material-ui/icons/FiberManualRecord';
 // React icons
 import { FaUsers } from 'react-icons/fa';
 // core components
-import GridContainer from 'components/Grid/GridContainer.jsx';
-import GridItem from 'components/Grid/GridItem.jsx';
-import Button from 'components/CustomButtons/Button.jsx';
-import CustomInput from 'components/CustomInput/CustomInput.jsx';
-import CustomLinearProgress from 'components/CustomLinearProgress/CustomLinearProgress.jsx';
-import Paginations from 'components/Pagination/Pagination.jsx';
-import Badge from 'components/Badge/Badge.jsx';
+import GridContainer from '../../../components/Grid/GridContainer';
+import GridItem from '../../../components/Grid/GridItem';
+import Button from '../../../components/CustomButtons/Button';
+import CustomInput from '../../../components/CustomInput/CustomInput';
+import CustomLinearProgress from '../../../components/CustomLinearProgress/CustomLinearProgress';
+import Paginations from '../../../components/Pagination/Pagination';
+import Badge from '../../../components/Badge/Badge';
 
-import basicsStyle from 'assets/jss/material-kit-react/views/componentsSections/basicsStyle.jsx';
+import basicsStyle from '../../../assets/jss/material-kit-react/views/componentsSections/basicsStyle';
 
 class SectionBasics extends React.Component {
   constructor(props) {
