@@ -53,7 +53,7 @@ export default function SectionDownload() {
             <h4>
               Comming soon{" "}
               <a href="#pablo" onClick={e => e.preventDefault()}>
-                NextJS Material Kit PRO{" "}
+                LED Lights and Parts{" "}
               </a>
               .It will have a huge number of components, sections and example
               pages. You Could Start Your Development With A Badass Material-UI
@@ -68,7 +68,7 @@ export default function SectionDownload() {
               href="https://www.creative-tim.com/product/material-kit-pro-react?ref=njsmk-download-section"
               target="_blank"
             >
-              NextJS Material Kit PRO
+              LED Lights and Parts
             </Button>
             <Button
               color="rose"

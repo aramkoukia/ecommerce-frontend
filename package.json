@@ -1,7 +1,7 @@
 {
-  "name": "next-material-kit",
+  "name": "wholesales-ecommerce-website",
   "version": "1.0.0",
-  "description": "NextJS Version of Material Kit React by Creative Tim (https://creative-tim.com)",
+  "description": "Wholesales E-Commerce Website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/nextjs-material-kit.git"
+    "url": "https://github.com/aramkoukia/ecommerce-frontend"
   },
   "keywords": [
     "next",
@@ -26,12 +26,12 @@
     "material-kit-react",
     "next-material-kit"
   ],
-  "author": "Creative Tim",
+  "author": "Aram Koukia",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/nextjs-material-kit/issues"
+    "url": "https://github.com/aramkoukia/ecommerce-frontend"
   },
-  "homepage": "https://demos.creative-tim.com/nextjs-material-kit",
+  "homepage": "https://github.com/aramkoukia/ecommerce-frontend",
   "dependencies": {
     "@material-ui/core": "4.3.2",
     "@material-ui/icons": "4.2.1",
