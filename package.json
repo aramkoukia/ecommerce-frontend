@@ -1,7 +1,7 @@
 {
-  "name": "wholesales-business-website",
+  "name": "next-material-kit",
   "version": "1.0.0",
-  "description": "Wholesales Business Website - Open Source (https://koukia.ca)",
+  "description": "NextJS Version of Material Kit React by Creative Tim (https://creative-tim.com)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aramkoukia/ecommerce-frontend"
+    "url": "git+https://github.com/creativetimofficial/nextjs-material-kit.git"
   },
   "keywords": [
     "next",
@@ -29,9 +29,9 @@
   "author": "Creative Tim",
   "license": "MIT",
   "bugs": {
-    "url": "https://koukia.ca"
+    "url": "https://github.com/creativetimofficial/nextjs-material-kit/issues"
   },
-  "homepage": "https://koukia.ca",
+  "homepage": "https://demos.creative-tim.com/nextjs-material-kit",
   "dependencies": {
     "@material-ui/core": "4.3.2",
     "@material-ui/icons": "4.2.1",
