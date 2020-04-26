@@ -362,6 +362,7 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
       return (
           <div className={classes.actionsContainer}>
             <div>
+            Based on your Custom Application, here is all the products that you need:
             <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
@@ -387,7 +388,8 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
           ))}
         </TableBody>
       </Table>
-    </TableContainer>              
+    </TableContainer>       
+           
               <Button
                 disabled={step === 0}
                 onClick={handleBack}
@@ -445,9 +447,9 @@ export default function RecommendationSection() {
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0} className={classes.resetContainer}>
-          <Typography>All steps completed - you&apos;re finished</Typography>
+          <Typography>All Done! You should receive this Quote in your email shortly!</Typography>
           <Button onClick={handleReset} className={classes.button} size="sm">
-            Reset
+            Start Another Custom Application
           </Button>
         </Paper>
       )}
