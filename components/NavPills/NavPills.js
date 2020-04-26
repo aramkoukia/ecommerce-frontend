@@ -11,10 +11,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 // core components
-import GridContainer from '../Grid/GridContainer.js';
-import GridItem from '../Grid/GridItem.js';
+import GridContainer from '../Grid/GridContainer';
+import GridItem from '../Grid/GridItem';
 
-import styles from '../../assets/jss/nextjs-material-kit/components/navPillsStyle.js';
+import styles from '../../assets/jss/nextjs-material-kit/components/navPillsStyle';
 
 const useStyles = makeStyles(styles);
 

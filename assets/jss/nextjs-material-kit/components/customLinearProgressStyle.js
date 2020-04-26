@@ -6,7 +6,7 @@ import {
   infoColor,
   roseColor,
   grayColor,
-} from '../../nextjs-material-kit.js';
+} from '../../nextjs-material-kit';
 
 const customLinearProgressStyle = {
   root: {

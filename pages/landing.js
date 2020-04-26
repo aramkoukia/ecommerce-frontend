@@ -1,17 +1,17 @@
 import React from 'react';
 import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
-import Header from '../components/Header/Header.js';
-import Footer from '../components/Footer/Footer.js';
-import GridContainer from '../components/Grid/GridContainer.js';
-import GridItem from '../components/Grid/GridItem.js';
-import Button from '../components/CustomButtons/Button.js';
-import HeaderLinks from '../components/Header/HeaderLinks.js';
-import Parallax from '../components/Parallax/Parallax.js';
-import styles from '../assets/jss/nextjs-material-kit/pages/landingPage.js';
-import RecommendationSection from '../pages-sections/LandingPage-Sections/RecommendationSection.js';
-import TeamSection from '../pages-sections/LandingPage-Sections/TeamSection.js';
-import WorkSection from '../pages-sections/LandingPage-Sections/WorkSection.js';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import GridContainer from '../components/Grid/GridContainer';
+import GridItem from '../components/Grid/GridItem';
+import Button from '../components/CustomButtons/Button';
+import HeaderLinks from '../components/Header/HeaderLinks';
+import Parallax from '../components/Parallax/Parallax';
+import styles from '../assets/jss/nextjs-material-kit/pages/landingPage';
+import RecommendationSection from '../pages-sections/LandingPage-Sections/RecommendationSection';
+import TeamSection from '../pages-sections/LandingPage-Sections/TeamSection';
+import WorkSection from '../pages-sections/LandingPage-Sections/WorkSection';
 
 const dashboardRoutes = [];
 

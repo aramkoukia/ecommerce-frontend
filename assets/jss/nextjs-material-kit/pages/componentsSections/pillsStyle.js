@@ -1,4 +1,4 @@
-import { container, title } from '../../../nextjs-material-kit.js';
+import { container, title } from '../../../nextjs-material-kit';
 
 const pillsStyle = {
   section: {

@@ -1,5 +1,5 @@
-import { cardTitle, title } from '../../../nextjs-material-kit.js';
-import imagesStyle from '../../imagesStyles.js';
+import { cardTitle, title } from '../../../nextjs-material-kit';
+import imagesStyle from '../../imagesStyles';
 
 const teamStyle = {
   section: {

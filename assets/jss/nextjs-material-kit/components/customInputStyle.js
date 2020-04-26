@@ -3,7 +3,7 @@ import {
   dangerColor,
   successColor,
   defaultFont,
-} from '../../nextjs-material-kit.js';
+} from '../../nextjs-material-kit';
 
 const customInputStyle = {
   disabled: {

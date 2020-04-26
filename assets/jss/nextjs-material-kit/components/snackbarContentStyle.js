@@ -6,7 +6,7 @@ import {
   warningBoxShadow,
   dangerBoxShadow,
   container,
-} from '../../nextjs-material-kit.js';
+} from '../../nextjs-material-kit';
 
 const snackbarContentStyle = {
   root: {

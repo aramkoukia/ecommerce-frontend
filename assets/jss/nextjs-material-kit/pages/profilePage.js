@@ -1,6 +1,6 @@
-import { container, title } from '../../nextjs-material-kit.js';
+import { container, title } from '../../nextjs-material-kit';
 
-import imagesStyle from '../imagesStyles.js';
+import imagesStyle from '../imagesStyles';
 
 const profilePageStyle = {
   container,

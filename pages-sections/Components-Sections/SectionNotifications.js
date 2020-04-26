@@ -5,10 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Check from '@material-ui/icons/Check';
 import Warning from '@material-ui/icons/Warning';
 // core components
-import SnackbarContent from '../../components/Snackbar/SnackbarContent.js';
-import Clearfix from '../../components/Clearfix/Clearfix.js';
+import SnackbarContent from '../../components/Snackbar/SnackbarContent';
+import Clearfix from '../../components/Clearfix/Clearfix';
 
-import styles from '../../assets/jss/nextjs-material-kit/pages/componentsSections/notificationsStyles.js';
+import styles from '../../assets/jss/nextjs-material-kit/pages/componentsSections/notificationsStyles';
 
 const useStyles = makeStyles(styles);
 

@@ -1,8 +1,8 @@
-import { container, title } from '../../../nextjs-material-kit.js';
+import { container, title } from '../../../nextjs-material-kit';
 
-import modalStyle from '../../modalStyle.js';
-import tooltipsStyle from '../../tooltipsStyle.js';
-import popoverStyles from '../../popoverStyles.js';
+import modalStyle from '../../modalStyle';
+import tooltipsStyle from '../../tooltipsStyle';
+import popoverStyles from '../../popoverStyles';
 
 const javascriptStyles = {
   section: {

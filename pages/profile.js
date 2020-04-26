@@ -8,14 +8,14 @@ import Camera from '@material-ui/icons/Camera';
 import Palette from '@material-ui/icons/Palette';
 import Favorite from '@material-ui/icons/Favorite';
 // core components
-import Header from '../components/Header/Header.js';
-import Footer from '../components/Footer/Footer.js';
-import Button from '../components/CustomButtons/Button.js';
-import GridContainer from '../components/Grid/GridContainer.js';
-import GridItem from '../components/Grid/GridItem.js';
-import HeaderLinks from '../components/Header/HeaderLinks.js';
-import NavPills from '../components/NavPills/NavPills.js';
-import Parallax from '../components/Parallax/Parallax.js';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import Button from '../components/CustomButtons/Button';
+import GridContainer from '../components/Grid/GridContainer';
+import GridItem from '../components/Grid/GridItem';
+import HeaderLinks from '../components/Header/HeaderLinks';
+import NavPills from '../components/NavPills/NavPills';
+import Parallax from '../components/Parallax/Parallax';
 
 import profile from '../assets/img/faces/christian.jpg';
 
@@ -30,7 +30,7 @@ import work3 from '../assets/img/examples/cynthia-del-rio.jpg';
 import work4 from '../assets/img/examples/mariya-georgieva.jpg';
 import work5 from '../assets/img/examples/clem-onojegaw.jpg';
 
-import styles from '../assets/jss/nextjs-material-kit/pages/profilePage.js';
+import styles from '../assets/jss/nextjs-material-kit/pages/profilePage';
 
 const useStyles = makeStyles(styles);
 

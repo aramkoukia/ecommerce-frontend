@@ -1,4 +1,4 @@
-import { container } from '../../../nextjs-material-kit.js';
+import { container } from '../../../nextjs-material-kit';
 
 const tabsStyle = {
   section: {
