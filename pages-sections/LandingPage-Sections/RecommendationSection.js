@@ -13,6 +13,34 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import Slider from '@material-ui/core/Slider';
+
+const marks = [
+  {
+    value: 0,
+    label: '0 Inch',
+  },
+  {
+    value: 50,
+    label: '50 Inch',
+  },
+  {
+    value: 250,
+    label: '250 Inch',
+  },  
+  {
+    value: 500,
+    label: '500 Inch',
+  },
+  {
+    value: 1000,
+    label: '1000 Inch',
+  },
+];
+
+function valuetext(value) {
+  return `${value}°C`;
+}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,7 +73,7 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
           <div className={classes.actionsContainer}>
             <div>
             <Grid container spacing={3}>
-              <Grid item xs={6} sm={3}>
+              <Grid item xs={6} sm={4}>
               <Card className={classes.root}>
             <CardActionArea>
               <CardMedia
@@ -72,7 +100,7 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
             </CardActions>
           </Card>
               </Grid>
-              <Grid item xs={6} sm={3}>
+              <Grid item xs={6} sm={4}>
               <Card className={classes.root}>
             <CardActionArea>
               <CardMedia
@@ -150,14 +178,25 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
       return (
           <div className={classes.actionsContainer}>
             <div>
+            <br />
+            <Slider
+              defaultValue={250}
+              getAriaValueText={valuetext}
+              aria-labelledby="discrete-slider-always"
+              step={1}
+              marks={marks}
+              valueLabelDisplay="on"
+            />
               <Button
                 disabled={step === 0}
                 onClick={handleBack}
                 className={classes.button}
+                size="sm"
               >
                 Back
               </Button>
               <Button
+                size="sm"
                 variant="contained"
                 color="primary"
                 onClick={handleNext}
@@ -169,8 +208,6 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
     </div>);    
     case 4:
       return (
-      <div>
-        <Typography>{label}</Typography>
           <div className={classes.actionsContainer}>
             <div>
               <Button
@@ -189,8 +226,7 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
                 Finish
               </Button>
             </div>
-          </div>            
-    </div>);    
+      </div>);    
     default:
       return 'Unknown step';
   }
@@ -215,6 +251,7 @@ export default function RecommendationSection() {
 
   return (
     <div>
+      <br />
       <Typography variant='h3' color='textSecondary' align='center'>Custom Applications</Typography>
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((label, index) => (
