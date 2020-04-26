@@ -29,7 +29,7 @@ export default function HeaderLinks(props) {
         <CustomDropdown
           noLiPadding
           navDropdown
-          buttonText="Components"
+          buttonText="Products"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
@@ -37,18 +37,34 @@ export default function HeaderLinks(props) {
           buttonIcon={Apps}
           dropdownList={[
             <Link href="/components">
-              <a className={classes.dropdownLink}>All components</a>
+              <a className={classes.dropdownLink}>Flexible LED Strip</a>
             </Link>,
-            <a
-              href="https://koukia.ca"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>
+            <Link href="/components">
+              <a className={classes.dropdownLink}>LED Drivers AND Power Supplies</a>
+            </Link>,
           ]}
         />
       </ListItem>
+      {/* <ListItem className={classes.listItem}>
+        <Button
+          href="https://koukia.ca"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          <CloudDownload className={classes.icons} /> Promotions
+        </Button>
+      </ListItem>       */}
+      {/* <ListItem className={classes.listItem}>
+        <Button
+          href="https://koukia.ca"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          <CloudDownload className={classes.icons} /> Custom Applications
+        </Button>
+      </ListItem> */}
       <ListItem className={classes.listItem}>
         <Button
           href="https://koukia.ca"
@@ -56,15 +72,10 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-          <CloudDownload className={classes.icons} /> Download
+          <CloudDownload className={classes.icons} /> About Us
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        {/*<Tooltip title="Delete">
-          <IconButton aria-label="Delete">
-            <DeleteIcon />
-          </IconButton>
-        </Tooltip>*/}
         <Tooltip
           id="instagram-twitter"
           title="Follow us on twitter"
