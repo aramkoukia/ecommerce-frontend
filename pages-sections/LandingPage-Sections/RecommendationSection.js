@@ -14,6 +14,12 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Slider from '@material-ui/core/Slider';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
 
 const marks = [
   {
@@ -83,6 +89,16 @@ const useStyles = makeStyles((theme) => ({
     height: 140,
   },
 }));
+
+function createData(name, code, amount, unitPrice, total) {
+  return { name, code, amount, unitPrice, total };
+}
+
+const rows = [
+  createData('SMART 12V 12.5A 150W Dimmable SMT-012-150VT', '666561564789', 10, 150.56, 545.08),
+  createData('FS-3528-3500-60-12-NS 10m (per liner foot)', '666561416294', 6, 350.56, 969.08),
+  createData('LED Module 5050 Back Lighting 12V 4 LEDs 6000k Pack of 20', '666561545588',  1, 122.56, 122.56),
+];
 
 function getSteps() {
   return ['Select Application / Use Case', 'Select Color Temperature', 'Select Lumen', 'Select Length and Height', 'Product List / Quote'];
@@ -346,6 +362,32 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
       return (
           <div className={classes.actionsContainer}>
             <div>
+            <TableContainer component={Paper}>
+      <Table className={classes.table} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Product</TableCell>
+            <TableCell>Code</TableCell>
+            <TableCell align="right">Amount</TableCell>
+            <TableCell align="right">Unit Price&nbsp;($)</TableCell>
+            <TableCell align="right">Total&nbsp;($)</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow key={row.name}>
+              <TableCell component="th" scope="row">
+                {row.name}
+              </TableCell>
+              <TableCell>{row.code}</TableCell>
+              <TableCell align="right">{row.amount}</TableCell>
+              <TableCell align="right">{row.unitPrice}</TableCell>
+              <TableCell align="right">{row.total}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>              
               <Button
                 disabled={step === 0}
                 onClick={handleBack}
