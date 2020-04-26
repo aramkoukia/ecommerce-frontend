@@ -38,8 +38,31 @@ const marks = [
   },
 ];
 
-function valuetext(value) {
-  return `${value}°C`;
+const lumenMarks = [
+  {
+    value: 50,
+    label: '50 Lumen',
+  },
+  {
+    value: 800,
+    label: '800 Lumen',
+  },  
+  {
+    value: 1000,
+    label: '1000 Lumen',
+  },
+  {
+    value: 2000,
+    label: '2000 Lumen',
+  },
+];
+
+function valueText(value) {
+  return `${value} Inch`;
+}
+
+function lumenText(value) {
+  return `${value} Lumen`;
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -62,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return ['Select Application / Use Case', 'Select Color Temperature', 'Select Lumin', 'Select Length and Height', 'Product List / Quote'];
+  return ['Select Application / Use Case', 'Select Color Temperature', 'Select Lumen', 'Select Length and Height', 'Product List / Quote'];
 }
 
 function getStepContent(step, handleBack, handleNext, label, steps) {
@@ -72,7 +95,7 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
       return (
           <div className={classes.actionsContainer}>
             <div>
-            <Grid container spacing={3}>
+              <Grid container spacing={3}>
               <Grid item xs={6} sm={4}>
               <Card className={classes.root}>
             <CardActionArea>
@@ -135,45 +158,157 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
       return (
           <div className={classes.actionsContainer}>
             <div>
+            <Grid container xs={12} spacing={3}>
+              <Grid item xs={3} sm={3}>
+              <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={require("../../assets/img/application/ultra-warm.png")}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Ultra Warm White
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Some description about Ultra Warm White specs
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
               <Button
-                disabled={step === 0}
+                size="sm"
+                color="primary"
+                onClick={handleNext}>
+                Select
+              </Button>
+            </CardActions>
+          </Card>
+              </Grid>
+              <Grid item xs={3} sm={3}>
+              <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={require("../../assets/img/application/warm.png")}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Warm White
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Some description about Warm White specs
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size="sm"
+                color="primary"
+                onClick={handleNext}>
+                Select
+              </Button>
+            </CardActions>
+          </Card>
+              </Grid>
+              <Grid item xs={3} sm={3}>
+              <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={require("../../assets/img/application/natural.png")}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Natural White
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Some description about Natural White specs
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size="sm"
+                color="primary"
+                onClick={handleNext}>
+                Select
+              </Button>
+            </CardActions>
+          </Card>
+              </Grid>
+              <Grid item xs={3} sm={3}>
+              <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={require("../../assets/img/application/cool.png")}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Cool White
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Some description about Cool White specs
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size="sm"
+                color="primary"
+                onClick={handleNext}>
+                Select
+              </Button>
+            </CardActions>
+          </Card>
+              </Grid>
+           </Grid>                            
+              <Button
                 onClick={handleBack}
                 className={classes.button}
+                size="sm"
               >
                 Back
-              </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={handleNext}
-                className={classes.button}
-              >
-                {step === steps.length - 1 ? 'Finish' : 'Next'}
               </Button>
             </div>
           </div>            
     );
     case 2:
       return (
-          <div className={classes.actionsContainer}>
-            <div>
-              <Button
-                disabled={step === 0}
-                onClick={handleBack}
-                className={classes.button}
-              >
-                Back
-              </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={handleNext}
-                className={classes.button}
-              >
-                Next
-              </Button>
-            </div>
-    </div>);
+        <div>
+        <br />
+        <Slider
+          defaultValue={800}
+          getAriaValueText={lumenText}
+          aria-labelledby="discrete-slider-always"
+          step={10}
+          max={2000}
+          marks={lumenMarks}
+          valueLabelDisplay="on"
+        />
+          <Button
+            disabled={step === 0}
+            onClick={handleBack}
+            className={classes.button}
+            size="sm"
+          >
+            Back
+          </Button>
+          <Button
+            size="sm"
+            variant="contained"
+            color="primary"
+            onClick={handleNext}
+            className={classes.button}
+          >
+            Next
+          </Button>
+        </div>);
     case 3:
       return (
           <div className={classes.actionsContainer}>
@@ -181,7 +316,8 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
             <br />
             <Slider
               defaultValue={250}
-              getAriaValueText={valuetext}
+              max={1000}
+              getAriaValueText={valueText}
               aria-labelledby="discrete-slider-always"
               step={1}
               marks={marks}
@@ -214,6 +350,7 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
                 disabled={step === 0}
                 onClick={handleBack}
                 className={classes.button}
+                size="sm"
               >
                 Back
               </Button>
@@ -222,8 +359,9 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
                 color="primary"
                 onClick={handleNext}
                 className={classes.button}
+                size="sm"
               >
-                Finish
+                Email Me the Quote
               </Button>
             </div>
       </div>);    
@@ -266,7 +404,7 @@ export default function RecommendationSection() {
       {activeStep === steps.length && (
         <Paper square elevation={0} className={classes.resetContainer}>
           <Typography>All steps completed - you&apos;re finished</Typography>
-          <Button onClick={handleReset} className={classes.button}>
+          <Button onClick={handleReset} className={classes.button} size="sm">
             Reset
           </Button>
         </Paper>
