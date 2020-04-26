@@ -3,10 +3,16 @@ import { makeStyles } from "@material-ui/core/styles";
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
+import Grid from '@material-ui/core/Grid';
 import StepContent from '@material-ui/core/StepContent';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Button from "../../components/CustomButtons/Button.js";
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,25 +28,169 @@ const useStyles = makeStyles((theme) => ({
   resetContainer: {
     padding: theme.spacing(3),
   },
+  media: {
+    height: 140,
+  },
 }));
 
 function getSteps() {
-  return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+  return ['Select Application / Use Case', 'Select Color Temperature', 'Select Lumin', 'Select Length and Height', 'Product List / Quote'];
 }
 
-function getStepContent(step) {
+function getStepContent(step, handleBack, handleNext, label, steps) {
+  const classes = useStyles();
   switch (step) {
     case 0:
-      return `${<image alt='test'></image>} For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`;
+      return (
+          <div className={classes.actionsContainer}>
+            <div>
+            <Grid container spacing={3}>
+              <Grid item xs={6} sm={3}>
+              <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={require("../../assets/img/application/office-light.jpg")}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Office
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Some description about Office application specs
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size="sm"
+                color="primary"
+                onClick={handleNext}>
+                Select
+              </Button>
+            </CardActions>
+          </Card>
+              </Grid>
+              <Grid item xs={6} sm={3}>
+              <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={require("../../assets/img/application/home-light.jpg")}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Home
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Some description about Home application specs
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size="sm"
+                color="primary"
+                onClick={handleNext}>
+                Select
+              </Button>
+            </CardActions>
+          </Card>
+              </Grid>
+           </Grid>              
+            </div>
+          </div>            
+           );
     case 1:
-      return 'An ad group contains one or more ads which target a shared set of keywords.';
+      return (
+          <div className={classes.actionsContainer}>
+            <div>
+              <Button
+                disabled={step === 0}
+                onClick={handleBack}
+                className={classes.button}
+              >
+                Back
+              </Button>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleNext}
+                className={classes.button}
+              >
+                {step === steps.length - 1 ? 'Finish' : 'Next'}
+              </Button>
+            </div>
+          </div>            
+    );
     case 2:
-      return `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`;
+      return (
+          <div className={classes.actionsContainer}>
+            <div>
+              <Button
+                disabled={step === 0}
+                onClick={handleBack}
+                className={classes.button}
+              >
+                Back
+              </Button>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleNext}
+                className={classes.button}
+              >
+                Next
+              </Button>
+            </div>
+    </div>);
+    case 3:
+      return (
+          <div className={classes.actionsContainer}>
+            <div>
+              <Button
+                disabled={step === 0}
+                onClick={handleBack}
+                className={classes.button}
+              >
+                Back
+              </Button>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleNext}
+                className={classes.button}
+              >
+                Next
+              </Button>
+            </div>
+    </div>);    
+    case 4:
+      return (
+      <div>
+        <Typography>{label}</Typography>
+          <div className={classes.actionsContainer}>
+            <div>
+              <Button
+                disabled={step === 0}
+                onClick={handleBack}
+                className={classes.button}
+              >
+                Back
+              </Button>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleNext}
+                className={classes.button}
+              >
+                Finish
+              </Button>
+            </div>
+          </div>            
+    </div>);    
     default:
       return 'Unknown step';
   }
@@ -64,32 +214,14 @@ export default function RecommendationSection() {
   };
 
   return (
-    <div className={classes.root}>
+    <div>
+      <Typography variant='h3' color='textSecondary' align='center'>Custom Applications</Typography>
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((label, index) => (
-          <Step key={label}>
+          <Step key={index}>
             <StepLabel>{label}</StepLabel>
             <StepContent>
-              <Typography>{getStepContent(index)}</Typography>
-              <div className={classes.actionsContainer}>
-                <div>
-                  <Button
-                    disabled={activeStep === 0}
-                    onClick={handleBack}
-                    className={classes.button}
-                  >
-                    Back
-                  </Button>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={handleNext}
-                    className={classes.button}
-                  >
-                    {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-                  </Button>
-                </div>
-              </div>
+              {getStepContent(index, handleBack, handleNext, label, steps)}
             </StepContent>
           </Step>
         ))}
