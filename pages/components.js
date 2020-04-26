@@ -53,9 +53,9 @@ export default function Components(props) {
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}>LED Light and Parts</h1>
+                <h1 className={classes.title}>World Of LED Lights</h1>
                 <h3 className={classes.subtitle}>
-                  A Badass Material Kit based on Material-UI and NextJS.
+                  Browse our LED Lighting Catalogue or Full Catalogue to find the right lighting product for your indoor or outdoor lighting needs.
                 </h3>
               </div>
             </GridItem>
@@ -64,7 +64,7 @@ export default function Components(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <SectionBasics />
+        {/* <SectionBasics />
         <SectionNavbars />
         <SectionTabs />
         <SectionPills />
@@ -84,7 +84,7 @@ export default function Components(props) {
           </Link>
         </GridItem>
         <SectionExamples />
-        <SectionDownload />
+        <SectionDownload /> */}
       </div>
       <Footer />
     </div>
