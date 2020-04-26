@@ -8,7 +8,8 @@
     "dev": "next",
     "build": "next build && next export",
     "start": "next start",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && rm -rf .next/ && npm install && npm run dev"
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && rm -rf .next/ && npm install && npm run dev",
+    "lint:fix": "eslint 'src/**' --ext=js,jsx --fix"
   },
   "repository": {
     "type": "git",
@@ -38,7 +39,7 @@
     "@zeit/next-sass": "1.0.1",
     "classnames": "2.2.6",
     "moment": "2.24.0",
-    "next": "9.0.5",
+    "next": "9.3.5",
     "next-compose-plugins": "2.2.0",
     "next-images": "1.1.2",
     "nextjs-redirect": "1.0.2",
@@ -53,5 +54,28 @@
     "react-swipeable-views": "0.13.3",
     "styled-components": "4.3.2",
     "webpack": "4.39.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
