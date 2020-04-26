@@ -58,20 +58,11 @@ export default function Footer(props) {
                 Blog
               </a>
             </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://lightsandparts.com/"
-                className={classes.block}
-                target="_blank"
-              >
-                Licenses
-              </a>
-            </ListItem>
           </List>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} ,
-           by{" "}
+          &copy; {1900 + new Date().getYear()}
+          {" "}by{" "}
           <a
             href="http://lightsandparts.com/"
             className={aClasses}
