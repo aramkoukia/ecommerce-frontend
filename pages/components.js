@@ -1,12 +1,7 @@
 import React from 'react';
-// nodejs library that concatenates classes
 import classNames from 'classnames';
-// react components for routing our app without refresh
 import Link from 'next/link';
-// @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
-// @material-ui/icons
-// core components
 import Header from '../components/Header/Header';
 import HeaderLinks from '../components/Header/HeaderLinks';
 import Footer from '../components/Footer/Footer';
@@ -14,7 +9,6 @@ import GridContainer from '../components/Grid/GridContainer';
 import GridItem from '../components/Grid/GridItem';
 import Button from '../components/CustomButtons/Button';
 import Parallax from '../components/Parallax/Parallax';
-// sections for this page
 import SectionBasics from '../pages-sections/Components-Sections/SectionBasics';
 import SectionNavbars from '../pages-sections/Components-Sections/SectionNavbars';
 import SectionTabs from '../pages-sections/Components-Sections/SectionTabs';
@@ -27,7 +21,6 @@ import SectionCompletedExamples from '../pages-sections/Components-Sections/Sect
 import SectionLogin from '../pages-sections/Components-Sections/SectionLogin';
 import SectionExamples from '../pages-sections/Components-Sections/SectionExamples';
 import SectionDownload from '../pages-sections/Components-Sections/SectionDownload';
-
 import styles from '../assets/jss/nextjs-material-kit/pages/components';
 
 const useStyles = makeStyles(styles);

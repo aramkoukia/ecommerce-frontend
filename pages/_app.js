@@ -1,7 +1,8 @@
 /*!
 
 =========================================================
-* NextJS Material Kit v1.0.0 based on Material Kit Free - v2.0.2 (Bootstrap 4.0.0 Final Edition) and Material Kit React v1.8.0
+* NextJS Material Kit v1.0.0 based on Material Kit Free -
+* v2.0.2 (Bootstrap 4.0.0 Final Edition) and Material Kit React v1.8.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/nextjs-material-kit
@@ -12,7 +13,8 @@
 
 =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice 
+* shall be included in all copies or substantial portions of the Software.
 
 */
 import React from 'react';
@@ -26,7 +28,6 @@ import PageChange from '../components/PageChange/PageChange';
 import '../assets/scss/nextjs-material-kit.scss?v=1.0.0';
 
 Router.events.on('routeChangeStart', (url) => {
-  console.log(`Loading: ${url}`);
   document.body.classList.add('body-page-transition');
   ReactDOM.render(
     <PageChange path={url} />,
