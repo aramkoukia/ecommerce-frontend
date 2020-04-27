@@ -1,7 +1,5 @@
 import React from 'react';
-// react plugin for creating date-time-picker
 import Datetime from 'react-datetime';
-// @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
 import Slide from '@material-ui/core/Slide';
 import IconButton from '@material-ui/core/IconButton';
@@ -13,14 +11,11 @@ import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Tooltip from '@material-ui/core/Tooltip';
 import Popover from '@material-ui/core/Popover';
-// @material-ui/icons
 import LibraryBooks from '@material-ui/icons/LibraryBooks';
 import Close from '@material-ui/icons/Close';
-// core components
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import Button from '../../components/CustomButtons/Button';
-
 import styles from '../../assets/jss/nextjs-material-kit/pages/componentsSections/javascriptStyles';
 
 const useStyles = makeStyles(styles);

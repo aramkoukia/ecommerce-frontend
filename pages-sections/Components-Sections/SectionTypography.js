@@ -1,10 +1,5 @@
 import React from 'react';
-// @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
-
-// @material-ui/icons
-
-// core components
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import Small from '../../components/Typography/Small';
@@ -15,9 +10,7 @@ import Info from '../../components/Typography/Info';
 import Primary from '../../components/Typography/Primary';
 import Muted from '../../components/Typography/Muted';
 import Quote from '../../components/Typography/Quote';
-
 import image from '../../assets/img/faces/avatar.jpg';
-
 import styles from '../../assets/jss/nextjs-material-kit/pages/componentsSections/typographyStyle';
 
 const useStyles = makeStyles(styles);

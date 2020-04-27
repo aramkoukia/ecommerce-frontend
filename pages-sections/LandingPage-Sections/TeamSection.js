@@ -1,21 +1,13 @@
 import React from 'react';
-// nodejs library that concatenates classes
 import classNames from 'classnames';
-// @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
-
-// @material-ui/icons
-
-// core components
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import Button from '../../components/CustomButtons/Button';
 import Card from '../../components/Card/Card';
 import CardBody from '../../components/Card/CardBody';
 import CardFooter from '../../components/Card/CardFooter';
-
 import styles from '../../assets/jss/nextjs-material-kit/pages/landingPageSections/teamStyle';
-
 import team1 from '../../assets/img/faces/avatar.jpg';
 import team2 from '../../assets/img/faces/christian.jpg';
 import team3 from '../../assets/img/faces/kendall.jpg';

@@ -1,13 +1,9 @@
-/*eslint-disable*/
-import React from "react";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
-import GridContainer from "../../components/Grid/GridContainer.js";
-import GridItem from "../../components/Grid/GridItem.js";
-import Button from "../../components/CustomButtons/Button.js";
-// core components
-import styles from "../../assets/jss/nextjs-material-kit/pages/componentsSections/downloadStyle.js";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import GridContainer from '../../components/Grid/GridContainer';
+import GridItem from '../../components/Grid/GridItem';
+import Button from '../../components/CustomButtons/Button';
+import styles from '../../assets/jss/nextjs-material-kit/pages/componentsSections/downloadStyle';
 
 const useStyles = makeStyles(styles);
 
@@ -51,9 +47,11 @@ export default function SectionDownload() {
           <GridItem xs={12} sm={12} md={8}>
             <h2>Want more?</h2>
             <h4>
-              Comming soon{" "}
-              <a href="#pablo" onClick={e => e.preventDefault()}>
-                LED Lights and Parts{" "}
+              Comming soon
+              {' '}
+              <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                LED Lights and Parts
+                {' '}
               </a>
               .It will have a huge number of components, sections and example
               pages. You Could Start Your Development With A Badass Material-UI
@@ -80,22 +78,28 @@ export default function SectionDownload() {
             </Button>
           </GridItem>
         </GridContainer>
-        <div className={classes.textCenter + " " + classes.sharingArea}>
+        <div className={`${classes.textCenter} ${classes.sharingArea}`}>
           <GridContainer justify="center">
             <h3>Thank you for supporting us!</h3>
           </GridContainer>
           <Button color="twitter">
-            <i className={classes.socials + " fab fa-twitter"} /> Tweet
+            <i className={`${classes.socials} fab fa-twitter`} />
+            {' '}
+            Tweet
           </Button>
           <Button color="facebook">
-            <i className={classes.socials + " fab fa-facebook-square"} /> Share
+            <i className={`${classes.socials} fab fa-facebook-square`} />
+            {' '}
+            Share
           </Button>
           <Button color="google">
-            <i className={classes.socials + " fab fa-google-plus-g"} />
+            <i className={`${classes.socials} fab fa-google-plus-g`} />
             Share
           </Button>
           <Button color="github">
-            <i className={classes.socials + " fab fa-github"} /> Star
+            <i className={`${classes.socials} fab fa-github`} />
+            {' '}
+            Star
           </Button>
         </div>
       </div>
