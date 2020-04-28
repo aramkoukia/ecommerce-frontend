@@ -13,7 +13,7 @@
 
 =========================================================
 
-* The above copyright notice and this permission notice 
+* The above copyright notice and this permission notice
 * shall be included in all copies or substantial portions of the Software.
 
 */
@@ -25,7 +25,7 @@ import Router from 'next/router';
 
 import PageChange from '../components/PageChange/PageChange';
 
-import '../assets/scss/nextjs-material-kit.scss?v=1.0.0';
+import '../assets/scss/nextjs-material-kit.scss';
 
 Router.events.on('routeChangeStart', (url) => {
   document.body.classList.add('body-page-transition');

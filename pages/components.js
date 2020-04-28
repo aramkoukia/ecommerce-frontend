@@ -23,6 +23,8 @@ import SectionExamples from '../pages-sections/Components-Sections/SectionExampl
 import SectionDownload from '../pages-sections/Components-Sections/SectionDownload';
 import styles from '../assets/jss/nextjs-material-kit/pages/components';
 
+const nextjsheader = require('../assets/img/nextjs_header.jpg');
+
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
@@ -41,7 +43,7 @@ export default function Components(props) {
         }}
         {...rest}
       />
-      <Parallax image={require('../assets/img/nextjs_header.jpg')}>
+      <Parallax image={nextjsheader}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>

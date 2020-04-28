@@ -25,6 +25,8 @@ import work4 from '../assets/img/examples/mariya-georgieva.jpg';
 import work5 from '../assets/img/examples/clem-onojegaw.jpg';
 import styles from '../assets/jss/nextjs-material-kit/pages/profilePage';
 
+const profilebg = require('../assets/img/profile-bg.jpg');
+
 const useStyles = makeStyles(styles);
 
 export default function ProfilePage(props) {
@@ -49,7 +51,7 @@ export default function ProfilePage(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image={require('../assets/img/profile-bg.jpg')} />
+      <Parallax small filter image={profilebg} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>

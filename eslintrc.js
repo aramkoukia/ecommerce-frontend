@@ -5,9 +5,6 @@ module.exports = {
     node: true,
     browser: true,
   },
-  globals: {
-    document: false,
-  },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
@@ -24,7 +21,7 @@ module.exports = {
   ],
   rules: {
     'linebreak-style': 0,
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': 'off',
     'react/forbid-prop-types': 'off',
     'react/state-in-constructor': [
       'error',

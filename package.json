@@ -36,6 +36,7 @@
   "dependencies": {
     "@material-ui/core": "4.9.2",
     "@material-ui/icons": "4.2.1",
+    "@material-ui/styles": "^4.9.10",
     "@zeit/next-sass": "1.0.1",
     "classnames": "2.2.6",
     "moment": "2.24.0",
