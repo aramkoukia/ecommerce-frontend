@@ -9,7 +9,7 @@
     "build": "next build && next export",
     "start": "next start",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && rm -rf .next/ && npm install && npm run dev",
-    "lint:fix": "eslint 'src/**' --ext=js,jsx --fix"
+    "lint:fix": "eslint 'pages/**' --ext=js,jsx --fix"
   },
   "repository": {
     "type": "git",
@@ -36,7 +36,6 @@
   "dependencies": {
     "@material-ui/core": "4.9.2",
     "@material-ui/icons": "4.2.1",
-    "@material-ui/styles": "^4.9.10",
     "@zeit/next-sass": "1.0.1",
     "classnames": "2.2.6",
     "moment": "2.24.0",
