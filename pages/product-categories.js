@@ -17,9 +17,9 @@ const nextjsheader = require('../assets/img/nextjs_header.jpg');
 
 const useStyles = makeStyles(styles);
 
-export default function ProductCategories(props) {
+function ProductCategories(props) {
   const classes = useStyles();
-  const { ...rest } = props;
+  const { productCategories, ...rest } = props;
   return (
     <div>
       <Header
@@ -54,7 +54,7 @@ export default function ProductCategories(props) {
               <SectionProductFilters />
             </GridItem>
             <GridItem xs={12} sm={12} md={10}>
-              <SectionProductCategories />
+              <SectionProductCategories productCategories={productCategories} />
             </GridItem>
           </GridContainer>
       </div>
@@ -62,3 +62,42 @@ export default function ProductCategories(props) {
     </div>
   );
 }
+
+export async function getStaticProps() {
+  // Get external data from the file system, API, DB, etc.
+  const data = [
+    {
+      name: '345 34 5345',
+      description: '3q45345 ',
+      image: '../../assets/img/faces/kendall.jpg',
+    },
+    {
+      name: 'zxcv zxcv xzcv',
+      description: 'xzcv xzcv xcvxzcv',
+      image: '../../assets/img/faces/avatar.jpg',
+    },
+    {
+      name: 'xzcvz xcvxzcv',
+      description: ' asdf asdf asdf asdf ',
+      image: '../../assets/img/faces/avatar.jpg',
+    },
+    {
+      name: 'as dfas dfsdf',
+      description: '../../assets/img/faces/kendall.jpg',
+      image: '',
+    },
+    {
+      name: 'as dfdsf asdf sdf ',
+      description: 's dfa df adsf asdf asdf asdf',
+      image: '../../assets/img/faces/christian.jpg',
+    },
+  ];
+
+  return {
+    props: {
+      productCategories: data,
+    },
+  };
+}
+
+export default ProductCategories;
