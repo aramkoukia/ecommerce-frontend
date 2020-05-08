@@ -49,8 +49,14 @@ export default function ProductCategories(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <SectionProductFilters />
-        <SectionProductCategories />
+          <GridContainer>
+            <GridItem xs={12} sm={12} md={2}>
+              <SectionProductFilters />
+            </GridItem>
+            <GridItem xs={12} sm={12} md={10}>
+              <SectionProductCategories />
+            </GridItem>
+          </GridContainer>
       </div>
       <Footer />
     </div>
