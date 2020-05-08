@@ -34,15 +34,11 @@ export default function SectionProductFilters() {
   return (
     <div className={classes.sections}>
       <div className={classes.container}>
-        <div className={classes.title}>
-          <h2>Filters</h2>
-        </div>
-        <div className={classes.space50} />
         <div id="checkRadios">
           <GridContainer>
-            <GridItem xs={12} sm={6} md={4} lg={3}>
+            <GridItem xs={12} sm={12} md={12}>
               <div className={classes.title}>
-                <h3>Checkboxes</h3>
+                <h3>Filters</h3>
               </div>
               <div
                 className={
@@ -55,7 +51,7 @@ export default function SectionProductFilters() {
                   control={(
                     <Checkbox
                       tabIndex={-1}
-                      onClick={() => handleToggle(21)}
+                      onClick={() => handleToggle(1)}
                       checkedIcon={<Check className={classes.checkedIcon} />}
                       icon={<Check className={classes.uncheckedIcon} />}
                       classes={{
@@ -65,7 +61,7 @@ export default function SectionProductFilters() {
                     />
                   )}
                   classes={{ label: classes.label, root: classes.labelRoot }}
-                  label="Unchecked"
+                  label="Home"
                 />
               </div>
               <div
@@ -79,8 +75,8 @@ export default function SectionProductFilters() {
                   control={(
                     <Checkbox
                       tabIndex={-1}
-                      onClick={() => handleToggle(22)}
-                      checked={checked.indexOf(22) !== -1}
+                      onClick={() => handleToggle(2)}
+                      checked={checked.indexOf(2) !== -1}
                       checkedIcon={<Check className={classes.checkedIcon} />}
                       icon={<Check className={classes.uncheckedIcon} />}
                       classes={{
@@ -90,21 +86,14 @@ export default function SectionProductFilters() {
                     />
                   )}
                   classes={{ label: classes.label, root: classes.labelRoot }}
-                  label="Checked"
+                  label="Office"
                 />
-              </div>
-              <div
-                className={
-                  `${classes.checkboxAndRadio
-                  } ${
-                    classes.checkboxAndRadioHorizontal}`
-                }
-              >
                 <FormControlLabel
-                  disabled
                   control={(
                     <Checkbox
                       tabIndex={-1}
+                      onClick={() => handleToggle(3)}
+                      checked={checked.indexOf(3) !== -1}
                       checkedIcon={<Check className={classes.checkedIcon} />}
                       icon={<Check className={classes.uncheckedIcon} />}
                       classes={{
@@ -113,27 +102,15 @@ export default function SectionProductFilters() {
                       }}
                     />
                   )}
-                  classes={{
-                    label: classes.label,
-                    disabled: classes.disabledCheckboxAndRadio,
-                    root: classes.labelRoot,
-                  }}
-                  label="Disabled Unchecked"
+                  classes={{ label: classes.label, root: classes.labelRoot }}
+                  label="Indoors"
                 />
-              </div>
-              <div
-                className={
-                  `${classes.checkboxAndRadio
-                  } ${
-                    classes.checkboxAndRadioHorizontal}`
-                }
-              >
                 <FormControlLabel
-                  disabled
                   control={(
                     <Checkbox
                       tabIndex={-1}
-                      checked={checked.indexOf(24) !== -1}
+                      onClick={() => handleToggle(4)}
+                      checked={checked.indexOf(4) !== -1}
                       checkedIcon={<Check className={classes.checkedIcon} />}
                       icon={<Check className={classes.uncheckedIcon} />}
                       classes={{
@@ -142,18 +119,30 @@ export default function SectionProductFilters() {
                       }}
                     />
                   )}
-                  classes={{
-                    label: classes.label,
-                    disabled: classes.disabledCheckboxAndRadio,
-                    root: classes.labelRoot,
-                  }}
-                  label="Disabled Checked"
-                />
+                  classes={{ label: classes.label, root: classes.labelRoot }}
+                  label="Outdoors"
+                />                                
+              </div>
+              <div
+                className={
+                  `${classes.checkboxAndRadio
+                  } ${
+                    classes.checkboxAndRadioHorizontal}`
+                }
+              >
+              </div>
+              <div
+                className={
+                  `${classes.checkboxAndRadio
+                  } ${
+                    classes.checkboxAndRadioHorizontal}`
+                }
+              >
               </div>
             </GridItem>
-            <GridItem xs={12} sm={6} md={4} lg={3}>
+            <GridItem xs={12} sm={12} md={12}>
               <div className={classes.title}>
-                <h3>Radio Buttons</h3>
+                <h3>Sort by:</h3>
               </div>
               <div
                 className={
@@ -186,7 +175,7 @@ export default function SectionProductFilters() {
                     label: classes.label,
                     root: classes.labelRoot,
                   }}
-                  label="First Radio"
+                  label="Most Popular"
                 />
               </div>
               <div
@@ -220,7 +209,7 @@ export default function SectionProductFilters() {
                     label: classes.label,
                     root: classes.labelRoot,
                   }}
-                  label="Second Radio"
+                  label="Most Recent"
                 />
               </div>
               <div
@@ -230,33 +219,6 @@ export default function SectionProductFilters() {
                     classes.checkboxAndRadioHorizontal}`
                 }
               >
-                <FormControlLabel
-                  disabled
-                  control={(
-                    <Radio
-                      checked={false}
-                      value="a"
-                      name="radio button disabled"
-                      aria-label="B"
-                      icon={
-                        <FiberManualRecord className={classes.radioUnchecked} />
-                      }
-                      checkedIcon={
-                        <FiberManualRecord className={classes.radioChecked} />
-                      }
-                      classes={{
-                        checked: classes.radio,
-                        disabled: classes.disabledCheckboxAndRadio,
-                        root: classes.radioRoot,
-                      }}
-                    />
-                  )}
-                  classes={{
-                    label: classes.label,
-                    root: classes.labelRoot,
-                  }}
-                  label="Disabled Unchecked Radio"
-                />
               </div>
               <div
                 className={
@@ -265,77 +227,6 @@ export default function SectionProductFilters() {
                     classes.checkboxAndRadioHorizontal}`
                 }
               >
-                <FormControlLabel
-                  disabled
-                  control={(
-                    <Radio
-                      checked
-                      value="b"
-                      name="radio button disabled"
-                      aria-label="B"
-                      icon={
-                        <FiberManualRecord className={classes.radioUnchecked} />
-                      }
-                      checkedIcon={
-                        <FiberManualRecord className={classes.radioChecked} />
-                      }
-                      classes={{
-                        checked: classes.radio,
-                        disabled: classes.disabledCheckboxAndRadio,
-                        root: classes.radioRoot,
-                      }}
-                    />
-                  )}
-                  classes={{ label: classes.label, root: classes.labelRoot }}
-                  label="Disabled Checked Radio"
-                />
-              </div>
-            </GridItem>
-            <GridItem xs={12} sm={6} md={4} lg={3}>
-              <div className={classes.title}>
-                <h3>Toggle Buttons</h3>
-              </div>
-              <div>
-                <FormControlLabel
-                  control={(
-                    <Switch
-                      checked={checkedA}
-                      onChange={(event) => setCheckedA(event.target.checked)}
-                      value="checkedA"
-                      classes={{
-                        switchBase: classes.switchBase,
-                        checked: classes.switchChecked,
-                        thumb: classes.switchIcon,
-                        track: classes.switchBar,
-                      }}
-                    />
-                  )}
-                  classes={{
-                    label: classes.label,
-                  }}
-                  label="Toggle is on"
-                />
-              </div>
-              <div>
-                <FormControlLabel
-                  control={(
-                    <Switch
-                      checked={checkedB}
-                      onChange={(event) => setCheckedB(event.target.checked)}
-                      value="checkedB"
-                      classes={{
-                        switchBase: classes.switchBase,
-                        checked: classes.switchChecked,
-                        thumb: classes.switchIcon,
-                        track: classes.switchBar,
-                      }}
-                    />
-                  )}
-                  classes={{
-                    label: classes.label,
-                  }}
-                  label="Toggle is off"
-                />
               </div>
             </GridItem>
           </GridContainer>
