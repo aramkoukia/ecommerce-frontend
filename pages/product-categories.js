@@ -9,25 +9,15 @@ import GridContainer from '../components/Grid/GridContainer';
 import GridItem from '../components/Grid/GridItem';
 import Button from '../components/CustomButtons/Button';
 import Parallax from '../components/Parallax/Parallax';
-import SectionBasics from '../pages-sections/Components-Sections/SectionBasics';
-import SectionNavbars from '../pages-sections/Components-Sections/SectionNavbars';
-import SectionTabs from '../pages-sections/Components-Sections/SectionTabs';
-import SectionPills from '../pages-sections/Components-Sections/SectionPills';
-import SectionNotifications from '../pages-sections/Components-Sections/SectionNotifications';
-import SectionTypography from '../pages-sections/Components-Sections/SectionTypography';
-import SectionJavascript from '../pages-sections/Components-Sections/SectionJavascript';
-import SectionCarousel from '../pages-sections/Components-Sections/SectionCarousel';
-import SectionCompletedExamples from '../pages-sections/Components-Sections/SectionCompletedExamples';
-import SectionLogin from '../pages-sections/Components-Sections/SectionLogin';
-import SectionExamples from '../pages-sections/Components-Sections/SectionExamples';
-import SectionDownload from '../pages-sections/Components-Sections/SectionDownload';
+import SectionProductFilters from '../pages-sections/ProductCategories-Sections/SectionProductFilters';
+import SectionProductCategories from '../pages-sections/ProductCategories-Sections/SectionProductCategories';
 import styles from '../assets/jss/nextjs-material-kit/pages/components';
 
 const nextjsheader = require('../assets/img/nextjs_header.jpg');
 
 const useStyles = makeStyles(styles);
 
-export default function Components(props) {
+export default function ProductCategories(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
@@ -59,27 +49,8 @@ export default function Components(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        {/* <SectionBasics />
-        <SectionNavbars />
-        <SectionTabs />
-        <SectionPills />
-        <SectionNotifications />
-        <SectionTypography />
-        <SectionJavascript />
-        <SectionCarousel />
-        <SectionCompletedExamples />
-        <SectionLogin />
-        <GridItem md={12} className={classes.textCenter}>
-          <Link href="/login">
-            <a className={classes.link}>
-              <Button color="primary" size="lg" simple>
-                View Login Page
-              </Button>
-            </a>
-          </Link>
-        </GridItem>
-        <SectionExamples />
-        <SectionDownload /> */}
+        <SectionProductFilters />
+        <SectionProductCategories />
       </div>
       <Footer />
     </div>

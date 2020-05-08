@@ -12,7 +12,7 @@ import styles from '../../assets/jss/nextjs-material-kit/pages/componentsSection
 
 const useStyles = makeStyles(styles);
 
-export default function SectionCarousel() {
+export default function SectionProductCategories() {
   const classes = useStyles();
   const settings = {
     dots: true,

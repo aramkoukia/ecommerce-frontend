@@ -9,7 +9,7 @@ import Button from '../components/CustomButtons/Button';
 import HeaderLinks from '../components/Header/HeaderLinks';
 import Parallax from '../components/Parallax/Parallax';
 import styles from '../assets/jss/nextjs-material-kit/pages/landingPage';
-import RecommendationSection from '../pages-sections/LandingPage-Sections/RecommendationSection';
+import CustomApplicationSection from '../pages-sections/LandingPage-Sections/CustomApplicationSection';
 import TeamSection from '../pages-sections/LandingPage-Sections/TeamSection';
 import WorkSection from '../pages-sections/LandingPage-Sections/WorkSection';
 
@@ -59,7 +59,7 @@ export default function LandingPage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <RecommendationSection />
+          <CustomApplicationSection />
           {/* <TeamSection />
           <WorkSection /> */}
         </div>

@@ -425,7 +425,7 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
   }
 }
 
-export default function RecommendationSection() {
+export default function CustomApplicationSection() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();

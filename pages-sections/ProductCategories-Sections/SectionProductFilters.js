@@ -21,7 +21,7 @@ import styles from '../../assets/jss/nextjs-material-kit/pages/componentsSection
 
 const useStyles = makeStyles(styles);
 
-export default function SectionBasics() {
+export default function SectionProductFilters() {
   const classes = useStyles();
   const [checked, setChecked] = React.useState([24, 22]);
   const [selectedEnabled, setSelectedEnabled] = React.useState('b');

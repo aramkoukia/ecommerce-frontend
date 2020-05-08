@@ -26,6 +26,15 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
+        <Button
+          href="/product-categories"
+          color="transparent"
+          className={classes.navLink}
+        >
+          <CloudDownload className={classes.icons} /> All Products
+        </Button>
+      </ListItem>      
+      <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           navDropdown
@@ -36,25 +45,15 @@ export default function HeaderLinks(props) {
           }}
           buttonIcon={Apps}
           dropdownList={[
-            <Link href="/components">
+            <Link href="/product-categories">
               <a className={classes.dropdownLink}>Flexible LED Strip</a>
             </Link>,
-            <Link href="/components">
+            <Link href="/product-categories">
               <a className={classes.dropdownLink}>LED Drivers AND Power Supplies</a>
             </Link>,
           ]}
         />
       </ListItem>
-      {/* <ListItem className={classes.listItem}>
-        <Button
-          href="https://koukia.ca"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <CloudDownload className={classes.icons} /> Promotions
-        </Button>
-      </ListItem>       */}
       {/* <ListItem className={classes.listItem}>
         <Button
           href="https://koukia.ca"
