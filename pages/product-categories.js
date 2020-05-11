@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import fetch from 'node-fetch';
 import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
 import Header from '../components/Header/Header';
@@ -64,38 +65,11 @@ function ProductCategories(props) {
 }
 
 export async function getStaticProps() {
-  // Get external data from the file system, API, DB, etc.
-  const data = [
-    {
-      name: '345 34 5345',
-      description: '3q45345 ',
-      image: '../../assets/img/faces/kendall.jpg',
-    },
-    {
-      name: 'zxcv zxcv xzcv',
-      description: 'xzcv xzcv xcvxzcv',
-      image: '../../assets/img/faces/avatar.jpg',
-    },
-    {
-      name: 'xzcvz xcvxzcv',
-      description: ' asdf asdf asdf asdf ',
-      image: '../../assets/img/faces/avatar.jpg',
-    },
-    {
-      name: 'as dfas dfsdf',
-      description: '../../assets/img/faces/kendall.jpg',
-      image: '',
-    },
-    {
-      name: 'as dfdsf asdf sdf ',
-      description: 's dfa df adsf asdf asdf asdf',
-      image: '../../assets/img/faces/christian.jpg',
-    },
-  ];
-
+  const res = await fetch('https://lightsandpartsapi.azurewebsites.net/api/website/producttypes');
+  const productCategories = await res.json();
   return {
     props: {
-      productCategories: data,
+      productCategories,
     },
   };
 }
