@@ -19,6 +19,9 @@ module.exports = {
   extends: [
     'airbnb',
   ],
+  globals: {
+    document: false,
+  },
   rules: {
     'linebreak-style': 0,
     'react/jsx-filename-extension': [0],

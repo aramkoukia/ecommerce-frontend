@@ -380,8 +380,6 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
                     <TableCell>Product</TableCell>
                     <TableCell>Code</TableCell>
                     <TableCell align="right">Amount</TableCell>
-                    <TableCell align="right">Unit Price&nbsp;($)</TableCell>
-                    <TableCell align="right">Total&nbsp;($)</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -392,8 +390,6 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
                         </TableCell>
                       <TableCell>{row.code}</TableCell>
                       <TableCell align="right">{row.amount}</TableCell>
-                      <TableCell align="right">{row.unitPrice}</TableCell>
-                      <TableCell align="right">{row.total}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
