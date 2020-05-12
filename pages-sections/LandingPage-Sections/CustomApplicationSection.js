@@ -386,8 +386,8 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
                   {rows.map((row) => (
                     <TableRow key={row.name}>
                       <TableCell component="th" scope="row">
-                          {row.name}
-                        </TableCell>
+                        {row.name}
+                      </TableCell>
                       <TableCell>{row.code}</TableCell>
                       <TableCell align="right">{row.amount}</TableCell>
                     </TableRow>
