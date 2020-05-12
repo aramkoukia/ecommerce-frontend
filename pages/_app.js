@@ -82,6 +82,18 @@ export default class MyApp extends App {
       <>
         <Head>
           <title>LED Lights and Parts</title>
+          <meta name="description" content="LED lights and parts in Vancouver | Supplier of energy efficient LED lights. We specialize in quality, money-saving solutions including bulb, light strips for commercial &amp; industrial buildings" />
+          <meta property="og:locale" content="en_US" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="LED Light and Parts Vancouver | LED Lights and Parts" />
+          <meta property="og:description" content="LED lights and parts in Vancouver | Supplier of energy efficient LED lights. We specialize in quality, money-saving solutions including bulb, light strips for commercial &amp; industrial buildings" />
+          <meta property="og:url" content="https://lightsandparts.com/" />
+          <meta property="og:site_name" content="LED Lights and Parts" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:description" content="LED lights and parts in Vancouver | Supplier of energy efficient LED lights. We specialize in quality, money-saving solutions including bulb, light strips for commercial &amp; industrial buildings" />
+          <meta name="twitter:title" content="LED Light and Parts Vancouver | LED Lights and Parts" />
+          <meta name="twitter:site" content="@pixelprintltd" />
+          <meta name="twitter:creator" content="@pixelprintltd" />
         </Head>
         <Component {...pageProps} />
       </>
