@@ -22,7 +22,9 @@ function SectionProductCategories({ productCategories }) {
       <h2 className={classes.title}>Product Categories</h2>
       <div>
         <GridContainer>
-          {productCategories.map(({ productTypeName, description, thumbnailImagePath }) => (
+          {productCategories.map(({
+            productTypeName, description, thumbnailImagePath, productCount,
+          }) => (
             <GridItem xs={12} sm={12} md={3}>
               <Card plain>
                 <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
@@ -30,11 +32,17 @@ function SectionProductCategories({ productCategories }) {
                 </GridItem>
                 <h4 className={classes.cardTitle}>
                   { productTypeName }
+                  (
+                  {' '}
+                  { productCount }
+                  {' '}
+                  )
                   <br />
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
                     { description }
+                    {' '}
                     {' '}
                     <a href="#pablo">Details</a>
                   </p>
