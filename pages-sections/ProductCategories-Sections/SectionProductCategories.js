@@ -8,6 +8,8 @@ import Card from '../../components/Card/Card';
 import CardBody from '../../components/Card/CardBody';
 import styles from '../../assets/jss/nextjs-material-kit/pages/landingPageSections/teamStyle';
 
+const imagePlaceholder = require('../../assets/img/image-placeholder.jpg');
+
 const useStyles = makeStyles(styles);
 
 function SectionProductCategories({ productCategories }) {
@@ -28,7 +30,11 @@ function SectionProductCategories({ productCategories }) {
             <GridItem xs={12} sm={12} md={3}>
               <Card plain>
                 <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img src={thumbnailImagePath} alt={productTypeName} className={imageClasses} />
+                  <img
+                    src={thumbnailImagePath || imagePlaceholder}
+                    alt={productTypeName}
+                    className={imageClasses}
+                  />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
                   { productTypeName }

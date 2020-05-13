@@ -1,14 +1,13 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import classNames from 'classnames';
 import fetch from 'node-fetch';
-import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
 import Header from '../components/Header/Header';
 import HeaderLinks from '../components/Header/HeaderLinks';
 import Footer from '../components/Footer/Footer';
 import GridContainer from '../components/Grid/GridContainer';
 import GridItem from '../components/Grid/GridItem';
-import Button from '../components/CustomButtons/Button';
 import Parallax from '../components/Parallax/Parallax';
 import SectionProductFilters from '../pages-sections/ProductCategories-Sections/SectionProductFilters';
 import SectionProductCategories from '../pages-sections/ProductCategories-Sections/SectionProductCategories';
@@ -41,7 +40,8 @@ function ProductCategories(props) {
               <div className={classes.brand}>
                 <h1 className={classes.title}>World Of LED Lights</h1>
                 <h3 className={classes.subtitle}>
-                  Browse our LED Lighting Catalogue or Full Catalogue to find the right lighting product for your indoor or outdoor lighting needs.
+                  Browse our LED Lighting Catalogue or Full Catalogue to find
+                  the right lighting product for your indoor or outdoor lighting needs.
                 </h3>
               </div>
             </GridItem>
@@ -50,14 +50,14 @@ function ProductCategories(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-          <GridContainer>
-            <GridItem xs={12} sm={12} md={2}>
-              <SectionProductFilters />
-            </GridItem>
-            <GridItem xs={12} sm={12} md={10}>
-              <SectionProductCategories productCategories={productCategories} />
-            </GridItem>
-          </GridContainer>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={2}>
+            <SectionProductFilters />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={10}>
+            <SectionProductCategories productCategories={productCategories} />
+          </GridItem>
+        </GridContainer>
       </div>
       <Footer />
     </div>

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,8 +11,8 @@ import HeaderLinks from '../components/Header/HeaderLinks';
 import Parallax from '../components/Parallax/Parallax';
 import styles from '../assets/jss/nextjs-material-kit/pages/landingPage';
 import CustomApplicationSection from '../pages-sections/LandingPage-Sections/CustomApplicationSection';
-import TeamSection from '../pages-sections/LandingPage-Sections/TeamSection';
-import WorkSection from '../pages-sections/LandingPage-Sections/WorkSection';
+
+const landingBg = require('../assets/img/landing-bg.jpg');
 
 const dashboardRoutes = [];
 
@@ -34,13 +35,14 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
-      <Parallax filter responsive image={require('../assets/img/landing-bg.jpg')}>
+      <Parallax filter responsive image={landingBg}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.title}>World of LED Lights</h1>
               <h4>
-                Browse our LED Lighting Catalogue or Full Catalogue to find the right lighting product for your indoor or outdoor lighting needs.
+                Browse our LED Lighting Catalogue or Full Catalogue to find the
+                right lighting product for your indoor or outdoor lighting needs.
               </h4>
               <br />
               <Button
@@ -60,8 +62,6 @@ export default function LandingPage(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <CustomApplicationSection />
-          {/* <TeamSection />
-          <WorkSection /> */}
         </div>
       </div>
       <Footer />
