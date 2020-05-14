@@ -12,7 +12,7 @@ const imagePlaceholder = require('../../assets/img/image-placeholder.jpg');
 
 const useStyles = makeStyles(styles);
 
-function SectionProductsInCategory({ category, products }) {
+function SectionProductsInCategory({ products }) {
   const classes = useStyles();
   const imageClasses = classNames(
     classes.imgRaised,
@@ -22,21 +22,21 @@ function SectionProductsInCategory({ category, products }) {
   return (
     <div className={classes.section}>
       <h2 className={classes.title}>
-        {category}
+        {products[0].productTypeName}
         {' '}
         Products
       </h2>
       <div>
         <GridContainer>
           {products.map(({
-            productName, thumbnailImagePath, slugUrl,
+            productName, productCode, imagePath, slugsUrl, balance,
           }) => (
             <GridItem xs={12} sm={12} md={3}>
               <Card plain>
                 <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <a href={`/${slugUrl}`}>
+                  <a href={`/${slugsUrl}`}>
                     <img
-                      src={thumbnailImagePath || imagePlaceholder}
+                      src={imagePath || imagePlaceholder}
                       alt={productName}
                       className={imageClasses}
                     />
@@ -44,13 +44,16 @@ function SectionProductsInCategory({ category, products }) {
                 </GridItem>
                 <CardBody>
                   <h4 className={classes.cardTitle}>
-                    <a href={`/${slugUrl}`}>
+                    <a href={`/${slugsUrl}`}>
                       { productName }
                     </a>
                   </h4>
-                  <a href={`/${slugUrl}`}>
-                    See
-                    Product Details
+                  { productCode }
+                  <br />
+                  { balance }
+                  <br />
+                  <a href={`/${slugsUrl}`}>
+                    See Product Details
                   </a>
                 </CardBody>
               </Card>

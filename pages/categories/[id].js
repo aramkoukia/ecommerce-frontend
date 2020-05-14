@@ -63,11 +63,8 @@ export default function Products({ products, ...rest }) {
 
 export async function getStaticPaths() {
   const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes`);
-  // console.log('-------------------', res);
   const items = await res.json();
-  // console.log('******************************', items);
   const paths = items.map((item) => ({ params: { id: item.slugUrl } }));
-  // console.log('5555555555555555555555555555', result);
   return {
     paths,
     fallback: false,
@@ -76,21 +73,9 @@ export async function getStaticPaths() {
 
 // export async function getServerSideProps({ params }) {
 export async function getStaticProps({ params }) {
-  // const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes/${params.id}/products`);
-  // const result = await res.json();
-  // const products = result.sort((a, b) => a.rank - b.rank);
-  const products = [
-    {
-      procuctName: 'test',
-      thumbnailImagePath: '',
-      slugUrl: '/test-product',
-    },
-    {
-      procuctName: 'test 3',
-      thumbnailImagePath: '',
-      slugUrl: '/test-product',
-    },
-  ];
+  const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes/${params.id}/products`);
+  const result = await res.json();
+  const products = result.sort((a, b) => a.rank - b.rank);
   return {
     props: {
       products,
