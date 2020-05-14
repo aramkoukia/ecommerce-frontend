@@ -65,7 +65,7 @@ function ProductCategories(props) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://lightsandpartsapi.azurewebsites.net/api/website/producttypes');
+  const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes`);
   const result = await res.json();
   const productCategories = result.sort((a, b) => a.rank - b.rank);
   return {

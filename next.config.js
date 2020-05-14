@@ -4,9 +4,13 @@ const withSass = require('@zeit/next-sass');
 const webpack = require('webpack');
 const path = require('path');
 
-module.exports = withPlugins([[withSass], [withImages]], {
-  webpack(config, options) {
-    config.resolve.modules.push(path.resolve('./landing'));
-    return config;
-  },
-});
+module.exports = withPlugins([[withSass], [withImages]],
+  {
+    webpack(config, options) {
+      config.resolve.modules.push(path.resolve('./landing'));
+      return config;
+    },
+    env: {
+      BASE_API_URL: process.env.BASE_API_URL,
+    },
+  });
