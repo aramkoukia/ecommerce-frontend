@@ -12,7 +12,7 @@ const imagePlaceholder = require('../../assets/img/image-placeholder.jpg');
 
 const useStyles = makeStyles(styles);
 
-function SectionProductCategories({ productCategories }) {
+function SectionProductsInCategory({ category, products }) {
   const classes = useStyles();
   const imageClasses = classNames(
     classes.imgRaised,
@@ -21,46 +21,45 @@ function SectionProductCategories({ productCategories }) {
   );
   return (
     <div className={classes.section}>
-      <h2 className={classes.title}>Product Categories</h2>
+      <h2 className={classes.title}>
+        {category}
+        {' '}
+        Products
+      </h2>
       <div>
         <GridContainer>
-          {productCategories.map(({
-            productTypeName, thumbnailImagePath, productCount, slugUrl,
+          {products.map(({
+            productName, thumbnailImagePath, slugUrl,
           }) => (
             <GridItem xs={12} sm={12} md={3}>
               <Card plain>
                 <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <a href={`categories/${slugUrl}`}>
+                  <a href={`/${slugUrl}`}>
                     <img
                       src={thumbnailImagePath || imagePlaceholder}
-                      alt={productTypeName}
+                      alt={productName}
                       className={imageClasses}
                     />
                   </a>
                 </GridItem>
                 <CardBody>
                   <h4 className={classes.cardTitle}>
-                    <a href={`categories/${slugUrl}`}>
-                      { productTypeName }
+                    <a href={`/${slugUrl}`}>
+                      { productName }
                     </a>
                   </h4>
-                  <a href={`categories/${slugUrl}`}>
+                  <a href={`/${slugUrl}`}>
                     See
-                    {' '}
-                    { productCount }
-                    {' '}
-                    Products
+                    Product Details
                   </a>
                 </CardBody>
               </Card>
             </GridItem>
           ))}
-
         </GridContainer>
-
       </div>
     </div>
   );
 }
 
-export default SectionProductCategories;
+export default SectionProductsInCategory;

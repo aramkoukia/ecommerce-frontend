@@ -9,7 +9,6 @@ import Footer from '../components/Footer/Footer';
 import GridContainer from '../components/Grid/GridContainer';
 import GridItem from '../components/Grid/GridItem';
 import Parallax from '../components/Parallax/Parallax';
-import SectionProductFilters from '../pages-sections/ProductCategories-Sections/SectionProductFilters';
 import SectionProductCategories from '../pages-sections/ProductCategories-Sections/SectionProductCategories';
 import styles from '../assets/jss/nextjs-material-kit/pages/components';
 
@@ -17,9 +16,8 @@ const nextjsheader = require('../assets/img/nextjs_header.jpg');
 
 const useStyles = makeStyles(styles);
 
-function ProductCategories(props) {
+function ProductCategories({ productCategories, ...rest }) {
   const classes = useStyles();
-  const { productCategories, ...rest } = props;
   return (
     <div>
       <Header
@@ -51,10 +49,7 @@ function ProductCategories(props) {
 
       <div className={classNames(classes.main, classes.mainRaised)}>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={2}>
-            <SectionProductFilters />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={10}>
+          <GridItem xs={12} sm={12} md={12}>
             <SectionProductCategories productCategories={productCategories} />
           </GridItem>
         </GridContainer>
