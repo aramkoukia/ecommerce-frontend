@@ -25,12 +25,12 @@ function SectionProductCategories({ productCategories }) {
       <div>
         <GridContainer>
           {productCategories.map(({
-            productTypeName, thumbnailImagePath, productCount, slugUrl,
+            productTypeName, thumbnailImagePath, productCount, slugsUrl,
           }) => (
             <GridItem xs={12} sm={12} md={3}>
               <Card plain>
                 <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <a href={`categories/${slugUrl}`}>
+                  <a href={`categories/${slugsUrl}`}>
                     <img
                       src={thumbnailImagePath || imagePlaceholder}
                       alt={productTypeName}
@@ -40,11 +40,11 @@ function SectionProductCategories({ productCategories }) {
                 </GridItem>
                 <CardBody>
                   <h4 className={classes.cardTitle}>
-                    <a href={`categories/${slugUrl}`}>
+                    <a href={`categories/${slugsUrl}`}>
                       { productTypeName }
                     </a>
                   </h4>
-                  <a href={`categories/${slugUrl}`}>
+                  <a href={`categories/${slugsUrl}`}>
                     See
                     {' '}
                     { productCount }
