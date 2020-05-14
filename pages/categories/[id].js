@@ -62,8 +62,8 @@ export default function Products({ products, ...rest }) {
 
 
 export async function getStaticPaths() {
-  // const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes`);
-  const res = await fetch('https://lightsandpartsapi.azurewebsites.net/api/website/producttypes');
+  const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes`);
+  // const res = await fetch('https://lightsandpartsapi.azurewebsites.net/api/website/producttypes');
   const items = await res.json();
   const paths = items.map((item) => ({ params: { id: item.slugUrl } }));
   return {
@@ -74,8 +74,8 @@ export async function getStaticPaths() {
 
 // export async function getServerSideProps({ params }) {
 export async function getStaticProps({ params }) {
-  // const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes/api/website/producttypes/${params.id}/products`);
-  const res = await fetch(`https://lightsandpartsapi.azurewebsites.net/api/website/producttypes/${params.id}/products`);
+  const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes/${params.id}/products`);
+  // const res = await fetch(`https://lightsandpartsapi.azurewebsites.net/api/website/producttypes/${params.id}/products`);
   const result = await res.json();
   const products = result.sort((a, b) => a.rank - b.rank);
   return {

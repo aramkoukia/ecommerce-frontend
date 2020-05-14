@@ -44,7 +44,7 @@ function SectionProductsInCategory({ products }) {
                 </GridItem>
                 <CardBody>
                   <h4 className={classes.cardTitle}>
-                    <a href={`/${slugsUrl}`}>
+                    <a href={`products/${slugsUrl}`}>
                       { productName }
                     </a>
                   </h4>
@@ -52,7 +52,7 @@ function SectionProductsInCategory({ products }) {
                   <br />
                   { balance }
                   <br />
-                  <a href={`/${slugsUrl}`}>
+                  <a href={`products/${slugsUrl}`}>
                     See Product Details
                   </a>
                 </CardBody>
