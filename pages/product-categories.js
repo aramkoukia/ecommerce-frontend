@@ -38,7 +38,7 @@ function ProductCategories({ productCategories, ...rest }) {
               <div className={classes.brand}>
                 <h1 className={classes.title}>World Of LED Lights</h1>
                 <h3 className={classes.subtitle}>
-                  Browse our LED Lighting Catalogue or Full Catalogue to find
+                  Browse our LED Lighting Catalog or Full Catalog to find
                   the right lighting product for your indoor or outdoor lighting needs.
                 </h3>
               </div>

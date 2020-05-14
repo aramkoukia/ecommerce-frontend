@@ -41,7 +41,7 @@ export default function LandingPage(props) {
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.title}>World of LED Lights</h1>
               <h4>
-                Browse our LED Lighting Catalogue or Full Catalogue to find the
+                Browse our LED Lighting Catalog or Full Catalog to find the
                 right lighting product for your indoor or outdoor lighting needs.
               </h4>
               <br />
