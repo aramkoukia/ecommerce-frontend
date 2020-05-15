@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import classNames from 'classnames';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import {
   ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography,
 } from '@material-ui/core';
@@ -17,6 +17,12 @@ const imagePlaceholder = require('../../assets/img/image-placeholder.jpg');
 const useStyles = makeStyles(styles);
 
 function SectionProduct({ product }) {
+  const [expanded, setExpanded] = React.useState('panel1');
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
   const {
     productName, productTypeName, imagePath, productCode, balance,
     description, detail, additionalInformation, warrantyInformation,
@@ -54,11 +60,13 @@ function SectionProduct({ product }) {
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={9}>
-            <ExpansionPanel>
+            <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
               <ExpansionPanelSummary
+                expanded
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
+                classes={{ expanded: classes.expandedPanel }}
               >
                 <Typography className={classes.heading}>Description</Typography>
               </ExpansionPanelSummary>
@@ -68,11 +76,12 @@ function SectionProduct({ product }) {
                 </Typography>
               </ExpansionPanelDetails>
             </ExpansionPanel>
-            <ExpansionPanel>
+            <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
               <ExpansionPanelSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
+                classes={{ expanded: classes.expandedPanel }}
               >
                 <Typography className={classes.heading}>Product Detail</Typography>
               </ExpansionPanelSummary>
@@ -82,11 +91,10 @@ function SectionProduct({ product }) {
                 </Typography>
               </ExpansionPanelDetails>
             </ExpansionPanel>
-            <ExpansionPanel>
+            <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
               <ExpansionPanelSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel2a-content"
-                id="panel2a-header"
+                classes={{ expanded: classes.expandedPanel }}
               >
                 <Typography className={classes.heading}>Additional Information</Typography>
               </ExpansionPanelSummary>
@@ -96,11 +104,10 @@ function SectionProduct({ product }) {
                 </Typography>
               </ExpansionPanelDetails>
             </ExpansionPanel>
-            <ExpansionPanel>
+            <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
               <ExpansionPanelSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel2a-content"
-                id="panel2a-header"
+                classes={{ expanded: classes.expandedPanel }}
               >
                 <Typography className={classes.heading}>Warranty Information</Typography>
               </ExpansionPanelSummary>

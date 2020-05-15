@@ -1,4 +1,4 @@
-import { cardTitle, title } from '../../../nextjs-material-kit';
+import { cardTitle, title, primaryColor } from '../../../nextjs-material-kit';
 import imagesStyle from '../../imagesStyles';
 
 const teamStyle = {
@@ -41,6 +41,10 @@ const teamStyle = {
   },
   margin5: {
     margin: '5px',
+  },
+  expandedPanel: {
+    backgroundColor: primaryColor,
+    color: 'white',
   },
 };
 
