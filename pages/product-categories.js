@@ -59,7 +59,8 @@ function ProductCategories({ productCategories, ...rest }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps(context) {
+  console.log('product - category - helloooooooooooooooooooooooooooooooooooooooooooooo', context);
   const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes`);
   const result = await res.json();
   const productCategories = result.sort((a, b) => a.rank - b.rank);

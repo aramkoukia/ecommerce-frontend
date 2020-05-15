@@ -60,20 +60,20 @@ export default function Products({ products, ...rest }) {
   );
 }
 
+// export async function getStaticPaths() {
+//   const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes`);
+//   const items = await res.json();
+//   const paths = items.map((item) => ({ params: { id: item.slugsUrl } }));
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 
-export async function getStaticPaths() {
-  const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes`);
-  const items = await res.json();
-  const paths = items.map((item) => ({ params: { id: item.slugsUrl } }));
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ query }) {
+  console.log('categories - helloooooooooooooooooooooooooooooooooooooooooooooo', query);
 // export async function getServerSideProps({ params }) {
-  const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes/${params.id}/products`);
+  const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes/${query.id}/products`);
   const result = await res.json();
   const products = result.sort((a, b) => a.rank - b.rank);
   return {
