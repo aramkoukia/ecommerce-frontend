@@ -72,8 +72,7 @@ export default function Product({ product, ...rest }) {
 // }
 
 export async function getServerSideProps({ query }) {
-  console.log('products - helloooooooooooooooooooooooooooooooooooooooooooooo', query);
-// export async function getServerSideProps({ params }) {
+  // export async function getStaticProps({ params }) {
   const res = await fetch(`${process.env.BASE_API_URL}/api/website/products/${query.id}/detail`);
   const product = await res.json();
   return {

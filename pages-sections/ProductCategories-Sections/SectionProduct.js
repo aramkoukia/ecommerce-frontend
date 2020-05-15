@@ -12,7 +12,10 @@ const imagePlaceholder = require('../../assets/img/image-placeholder.jpg');
 
 const useStyles = makeStyles(styles);
 
-function SectionProduct({ productName, imagePath, productCode, balance }) {
+function SectionProduct({ product }) {
+  const {
+    productName, productTypeName, imagePath, productCode, balance,
+  } = product;
   const classes = useStyles();
   const imageClasses = classNames(
     classes.imgRaised,
@@ -21,9 +24,12 @@ function SectionProduct({ productName, imagePath, productCode, balance }) {
   );
   return (
     <div className={classes.section}>
-      <h2 className={classes.title}>
+      <h4 className={classes.title}>
+        {productTypeName}
+        :
+        {' '}
         {productName}
-      </h2>
+      </h4>
       <div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={3}>

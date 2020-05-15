@@ -34,7 +34,7 @@ function SectionProductsInCategory({ products }) {
             <GridItem xs={12} sm={12} md={3}>
               <Card plain>
                 <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <a href={`/${slugsUrl}`}>
+                  <a href={`/products/${slugsUrl}`}>
                     <img
                       src={imagePath || imagePlaceholder}
                       alt={productName}
@@ -44,7 +44,7 @@ function SectionProductsInCategory({ products }) {
                 </GridItem>
                 <CardBody>
                   <h4 className={classes.cardTitle}>
-                    <a href={`products/${slugsUrl}`}>
+                    <a href={`/products/${slugsUrl}`}>
                       { productName }
                     </a>
                   </h4>
@@ -52,7 +52,7 @@ function SectionProductsInCategory({ products }) {
                   <br />
                   { balance }
                   <br />
-                  <a href={`products/${slugsUrl}`}>
+                  <a href={`/products/${slugsUrl}`}>
                     See Product Details
                   </a>
                 </CardBody>
