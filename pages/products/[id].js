@@ -71,8 +71,8 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getServerSideProps({ params }) {
-// export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }) {
+// export async function getServerSideProps({ params }) {
   const res = await fetch(`${process.env.BASE_API_URL}/api/website/products/${params.id}/detail`);
   const result = await res.json();
   const products = result.sort((a, b) => a.rank - b.rank);
