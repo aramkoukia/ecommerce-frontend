@@ -3,11 +3,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Marker from './Marker';
 import GoogleMap from './GoogleMap';
+import GoogleMapReact from 'google-map-react';
 import styles from '../../assets/jss/nextjs-material-kit/components/badgeStyle';
 
 // const useStyles = makeStyles(styles);
 
-export default function LocationInfo(places) {
+export default function LocationInfo({ zoom, center, places }) {
   // Return map bounds based on list of places
   const LOS_ANGELES_CENTER = [34.0522, -118.2437];
   const getMapBounds = (map, maps) => {
@@ -42,24 +43,19 @@ export default function LocationInfo(places) {
   };
 
   return (
-    <div>
-      {!places && (
-      <GoogleMap
-        defaultZoom={10}
-        defaultCenter={LOS_ANGELES_CENTER}
-        yesIWantToUseGoogleMapApiInternals
-        onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps, places)}
+    // Important! Always set the container height explicitly
+    <div style={{ height: '30vh', width: '100%' }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: process.env.GOOGLE_MAP_KEY }}
+        defaultCenter={center}
+        defaultZoom={zoom}
       >
-        {places.map((place) => (
-          <Marker
-            key={place.id}
-            text={place.name}
-            lat={place.geometry.location.lat}
-            lng={place.geometry.location.lng}
-          />
-        ))}
-      </GoogleMap>
-      )}
+        {/* <AnyReactComponent
+          lat={59.955413}
+          lng={30.337844}
+          text="My Marker"
+        /> */}
+      </GoogleMapReact>
     </div>
   );
 }

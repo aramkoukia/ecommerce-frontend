@@ -12,5 +12,6 @@ module.exports = withPlugins([[withSass], [withImages]],
     },
     env: {
       BASE_API_URL: process.env.BASE_API_URL,
+      GOOGLE_MAP_KEY: process.env.GOOGLE_MAP_KEY,
     },
   });

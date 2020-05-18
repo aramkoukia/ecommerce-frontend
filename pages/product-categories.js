@@ -31,22 +31,7 @@ function ProductCategories({ productCategories, ...rest }) {
         }}
         {...rest}
       />
-      <Parallax image={nextjsheader}>
-        <div className={classes.container}>
-          <GridContainer>
-            <GridItem>
-              <div className={classes.brand}>
-                <h1 className={classes.title}>World Of LED Lights</h1>
-                <h3 className={classes.subtitle}>
-                  Browse our LED Lighting Catalog or Full Catalog to find
-                  the right lighting product for your indoor or outdoor lighting needs.
-                </h3>
-              </div>
-            </GridItem>
-          </GridContainer>
-        </div>
-      </Parallax>
-
+      <Parallax small image={nextjsheader} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
