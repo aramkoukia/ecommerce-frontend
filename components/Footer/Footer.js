@@ -1,17 +1,10 @@
-/*eslint-disable*/
-import React from "react";
-// nodejs library to set properties for components
-import PropTypes from "prop-types";
-// nodejs library that concatenates classes
-import classNames from "classnames";
-// material-ui core components
-import { List, ListItem } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-
-import styles from "../../assets/jss/nextjs-material-kit/components/footerStyle.js";
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { List, ListItem } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import styles from '../../assets/jss/nextjs-material-kit/components/footerStyle';
 
 const useStyles = makeStyles(styles);
 
@@ -20,11 +13,11 @@ export default function Footer(props) {
   const { whiteFont } = props;
   const footerClasses = classNames({
     [classes.footer]: true,
-    [classes.footerWhiteFont]: whiteFont
+    [classes.footerWhiteFont]: whiteFont,
   });
   const aClasses = classNames({
     [classes.a]: true,
-    [classes.footerWhiteFont]: whiteFont
+    [classes.footerWhiteFont]: whiteFont,
   });
   return (
     <footer className={footerClasses}>
@@ -33,43 +26,46 @@ export default function Footer(props) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="http://lightsandparts.com/"
+                href="product-categories"
                 className={classes.block}
-                target="_blank"
+              >
+                All Products
+              </a>
+            </ListItem>
+            <ListItem className={classes.inlineBlock}>
+              <a
+                href="/contact-us"
+                className={classes.block}
               >
                 Contact Us
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="http://lightsandparts.com/"
+                href="/about-us"
                 className={classes.block}
-                target="_blank"
               >
                 About us
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://lightsandparts.com/"
-                className={classes.block}
-                target="_blank"
-              >
-                Blog
               </a>
             </ListItem>
           </List>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()}
-          {" "}by{" "}
-          <a
-            href="http://lightsandparts.com/"
-            className={aClasses}
-            target="_blank"
-          >
-            LED Lights and Parts
-          </a>
+          <p>
+            &copy;
+            {' '}
+            {1900 + new Date().getYear()}
+            {' '}
+            by
+            {' '}
+            <a
+              href="http://lightsandparts.com/"
+              className={aClasses}
+              target="_blank"
+            >
+              LED Lights and Parts
+            </a>
+          </p>
         </div>
       </div>
     </footer>
@@ -77,5 +73,5 @@ export default function Footer(props) {
 }
 
 Footer.propTypes = {
-  whiteFont: PropTypes.bool
+  whiteFont: PropTypes.bool,
 };
