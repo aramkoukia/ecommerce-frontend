@@ -1,12 +1,12 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Apps, Business, ContactPhone } from '@material-ui/icons';
-import CustomDropdown from '../CustomDropdown/CustomDropdown';
+// import CustomDropdown from '../CustomDropdown/CustomDropdown';
 import Button from '../CustomButtons/Button';
 import styles from '../../assets/jss/nextjs-material-kit/components/headerLinksStyle';
 
@@ -25,6 +25,17 @@ export default function HeaderLinks(props) {
           <Apps className={classes.icons} />
           {' '}
           All Products
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="/custom-applications"
+          color="transparent"
+          className={classes.navLink}
+        >
+          <Apps className={classes.icons} />
+          {' '}
+          Custom Applications
         </Button>
       </ListItem>
       {/* <ListItem className={classes.listItem}>

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
@@ -439,9 +440,8 @@ export default function CustomApplicationSection() {
   };
 
   return (
-    <div>
-      <br />
-      <Typography variant="h3" color="textSecondary" align="center">Custom Applications</Typography>
+    <div className={classes.section}>
+      <h2 className={classes.title}>&nbsp;&nbsp;Custom Applications</h2>
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((label, index) => (
           <Step key={index}>

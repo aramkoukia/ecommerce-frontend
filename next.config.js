@@ -7,7 +7,7 @@ const path = require('path');
 module.exports = withPlugins([[withSass], [withImages]],
   {
     webpack(config, options) {
-      config.resolve.modules.push(path.resolve('./landing'));
+      config.resolve.modules.push(path.resolve('./product-categories'));
       return config;
     },
     env: {

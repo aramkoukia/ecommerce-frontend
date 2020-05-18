@@ -34,6 +34,14 @@ export default function Footer(props) {
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
+                href="custom-applications"
+                className={classes.block}
+              >
+                Custom Applications
+              </a>
+            </ListItem>
+            <ListItem className={classes.inlineBlock}>
+              <a
                 href="/contact-us"
                 className={classes.block}
               >

@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
-import Router from 'next/router';
+import React from 'react';
 
-export default class _error extends Component {
-  componentDidMount() {
-    Router.push('/landing');
-  }
-
-  render() {
-    return <div />;
-  }
+export default function _error(props) {
+  // componentDidMount() {
+  //   Router.push('/product-categories');
+  // }
+  return (<div>Error</div>);
 }
