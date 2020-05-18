@@ -12,7 +12,7 @@ import HeaderLinks from '../../components/Header/HeaderLinks';
 import Parallax from '../../components/Parallax/Parallax';
 import styles from '../../assets/jss/nextjs-material-kit/pages/components';
 
-const nextjsheader = require('../../assets/img/nextjs_header.jpg');
+const header = require('../../assets/img/nextjs_header.jpg');
 
 const useStyles = makeStyles(styles);
 
@@ -31,21 +31,7 @@ export default function Product({ product, ...rest }) {
         }}
         {...rest}
       />
-      <Parallax image={nextjsheader}>
-        <div className={classes.container}>
-          <GridContainer>
-            <GridItem>
-              <div className={classes.brand}>
-                <h1 className={classes.title}>World Of LED Lights</h1>
-                <h3 className={classes.subtitle}>
-                  Browse our LED Lighting Catalog or Full Catalog to find
-                  the right lighting product for your indoor or outdoor lighting needs.
-                </h3>
-              </div>
-            </GridItem>
-          </GridContainer>
-        </div>
-      </Parallax>
+      <Parallax small image={header} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <GridContainer>
           <GridItem xs={12} sm={12} md={3}>
