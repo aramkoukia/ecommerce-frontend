@@ -91,8 +91,20 @@ export default function AboutUsPage(props) {
                     33228 S Fraser Way Abbotsford, BC V2S 2B3
                   </li>
                 </ul>
-                <b>EMAIL: </b>
-                info@lightsandparts.com
+                <p>
+                  <b>EMAIL: </b>
+                  info@lightsandparts.com
+                </p>
+
+                <p>
+                  <b>Phone Number: </b>
+                  <ul>
+                    <li>Toll Free: 1(888) 672-2627</li>
+                    <li>Tel Vancouver: (604) 559-5000</li>
+                    <li>Tel Abbotsford: (604) 744-4474</li>
+                    <li>Fax: (604) 559-5008</li>
+                  </ul>
+                </p>
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <b>COVID_19 EFFECTED HOURS</b>
