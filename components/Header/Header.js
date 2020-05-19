@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
 import Drawer from '@material-ui/core/Drawer';
 import Menu from '@material-ui/icons/Menu';
+// import ProductSearch from '../Product/ProductSearch';
 import styles from '../../assets/jss/nextjs-material-kit/components/headerStyle';
 
 const useStyles = makeStyles(styles);
@@ -78,6 +79,7 @@ export default function Header(props) {
         </div>
         <Hidden smDown implementation="css">
           {rightLinks}
+          {/* <ProductSearch fullWidth /> */}
         </Hidden>
         <Hidden mdUp>
           <IconButton
