@@ -36,7 +36,11 @@ function SectionProduct({ product }) {
         {' '}
         {productName}
       </h4>
-      <h5>SKU: { productCode }</h5>
+      <h5>
+        SKU:
+        { ' ' }
+        { productCode }
+      </h5>
       <h6>{ balance }</h6>
       <div>
         <GridContainer style={{ padding: '15px' }}>
