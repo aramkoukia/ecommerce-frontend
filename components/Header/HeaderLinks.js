@@ -8,8 +8,6 @@ import Tooltip from '@material-ui/core/Tooltip';
 import { Apps, Business, ContactPhone } from '@material-ui/icons';
 // import CustomDropdown from '../CustomDropdown/CustomDropdown';
 import Button from '../CustomButtons/Button';
-import GridContainer from '../Grid/GridContainer';
-import GridItem from '../Grid/GridItem';
 import styles from '../../assets/jss/nextjs-material-kit/components/headerLinksStyle';
 
 const useStyles = makeStyles(styles);
@@ -17,30 +15,30 @@ const useStyles = makeStyles(styles);
 export default function HeaderLinks(props) {
   const classes = useStyles();
   return (
-        <List className={classes.list}>
-          <ListItem className={classes.listItem}>
-            <Button
-              href="/product-categories"
-              color="transparent"
-              className={classes.navLink}
-            >
-              <Apps className={classes.icons} />
-              {' '}
-              All Products
-            </Button>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Button
-              href="/custom-applications"
-              color="transparent"
-              className={classes.navLink}
-            >
-              <Apps className={classes.icons} />
-              {' '}
-              Custom Applications
-            </Button>
-          </ListItem>
-          {/* <ListItem className={classes.listItem}>
+    <List className={classes.list}>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="/product-categories"
+          color="transparent"
+          className={classes.navLink}
+        >
+          <Apps className={classes.icons} />
+          {' '}
+          All Products
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="/custom-applications"
+          color="transparent"
+          className={classes.navLink}
+        >
+          <Apps className={classes.icons} />
+          {' '}
+          Custom Applications
+        </Button>
+      </ListItem>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           navDropdown
@@ -60,7 +58,7 @@ export default function HeaderLinks(props) {
           ]}
         />
       </ListItem> */}
-          {/* <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <Button
           href="https://koukia.ca"
           color="transparent"
@@ -70,98 +68,96 @@ export default function HeaderLinks(props) {
           <CloudDownload className={classes.icons} /> Custom Applications
         </Button>
       </ListItem> */}
-          <ListItem className={classes.listItem}>
-            <Button
-              href="/contact-us"
-              color="transparent"
-              className={classes.navLink}
-            >
-              <ContactPhone className={classes.icons} />
-              {' '}
-              Contact Us
-            </Button>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Button
-              href="/about-us"
-              color="transparent"
-              className={classes.navLink}
-            >
-              <Business className={classes.icons} />
-              {' '}
-              About Us
-            </Button>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Tooltip
-              id="instagram-twitter"
-              title="Follow us on Twitter"
-              placement="top"
-              classes={{ tooltip: classes.tooltip }}
-            >
-              <Button
-                href="https://twitter.com/pixelprintltd"
-                target="_blank"
-                color="transparent"
-                className={classes.navLink}
-              >
-                <i className={`${classes.socialIcons} fab fa-twitter`} />
-              </Button>
-            </Tooltip>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Tooltip
-              id="instagram-facebook"
-              title="Follow us on Facebook"
-              placement="top"
-              classes={{ tooltip: classes.tooltip }}
-            >
-              <Button
-                color="transparent"
-                href="https://www.facebook.com/LedLightsAndParts"
-                target="_blank"
-                className={classes.navLink}
-              >
-                <i className={`${classes.socialIcons} fab fa-facebook`} />
-              </Button>
-            </Tooltip>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Tooltip
-              id="instagram-tooltip"
-              title="Follow us on Instagram"
-              placement="top"
-              classes={{ tooltip: classes.tooltip }}
-            >
-              <Button
-                color="transparent"
-                href="https://www.instagram.com/led_lights_and_parts/"
-                target="_blank"
-                className={classes.navLink}
-              >
-                <i className={`${classes.socialIcons} fab fa-instagram`} />
-              </Button>
-            </Tooltip>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Tooltip
-              id="youtube-tooltip"
-              title="Subscribe to our Youtube channel"
-              placement="top"
-              classes={{ tooltip: classes.tooltip }}
-            >
-              <Button
-                color="transparent"
-                href="https://www.youtube.com/channel/UChwcs8KIeeI7gFh614Phe3g"
-                target="_blank"
-                className={classes.navLink}
-              >
-                <i className={`${classes.socialIcons} fab fa-youtube`} />
-              </Button>
-            </Tooltip>
-          </ListItem>
-        </List>
-      </GridItem>
-    </GridContainer>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="/contact-us"
+          color="transparent"
+          className={classes.navLink}
+        >
+          <ContactPhone className={classes.icons} />
+          {' '}
+          Contact Us
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="/about-us"
+          color="transparent"
+          className={classes.navLink}
+        >
+          <Business className={classes.icons} />
+          {' '}
+          About Us
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          id="instagram-twitter"
+          title="Follow us on Twitter"
+          placement="top"
+          classes={{ tooltip: classes.tooltip }}
+        >
+          <Button
+            href="https://twitter.com/pixelprintltd"
+            target="_blank"
+            color="transparent"
+            className={classes.navLink}
+          >
+            <i className={`${classes.socialIcons} fab fa-twitter`} />
+          </Button>
+        </Tooltip>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          id="instagram-facebook"
+          title="Follow us on Facebook"
+          placement="top"
+          classes={{ tooltip: classes.tooltip }}
+        >
+          <Button
+            color="transparent"
+            href="https://www.facebook.com/LedLightsAndParts"
+            target="_blank"
+            className={classes.navLink}
+          >
+            <i className={`${classes.socialIcons} fab fa-facebook`} />
+          </Button>
+        </Tooltip>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          id="instagram-tooltip"
+          title="Follow us on Instagram"
+          placement="top"
+          classes={{ tooltip: classes.tooltip }}
+        >
+          <Button
+            color="transparent"
+            href="https://www.instagram.com/led_lights_and_parts/"
+            target="_blank"
+            className={classes.navLink}
+          >
+            <i className={`${classes.socialIcons} fab fa-instagram`} />
+          </Button>
+        </Tooltip>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          id="youtube-tooltip"
+          title="Subscribe to our Youtube channel"
+          placement="top"
+          classes={{ tooltip: classes.tooltip }}
+        >
+          <Button
+            color="transparent"
+            href="https://www.youtube.com/channel/UChwcs8KIeeI7gFh614Phe3g"
+            target="_blank"
+            className={classes.navLink}
+          >
+            <i className={`${classes.socialIcons} fab fa-youtube`} />
+          </Button>
+        </Tooltip>
+      </ListItem>
+    </List>
   );
 }

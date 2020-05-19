@@ -114,7 +114,7 @@ const top100Films = [
   { title: 'Monty Python and the Holy Grail', year: 1975 },
 ];
 
-export default function SectionProductSearch() {
+export default function ProductSearch() {
   const classes = useStyles();
   const options = top100Films.map((option) => {
     const firstLetter = option.title[0].toUpperCase();
