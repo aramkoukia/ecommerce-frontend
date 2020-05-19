@@ -1,18 +1,14 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import classNames from 'classnames';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography,
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
-import Card from '../../components/Card/Card';
-import CardBody from '../../components/Card/CardBody';
+import ProductImages from './ProductImages';
 import styles from '../../assets/jss/nextjs-material-kit/pages/landingPageSections/teamStyle';
-
-const imagePlaceholder = require('../../assets/img/image-placeholder.jpg');
 
 const useStyles = makeStyles(styles);
 
@@ -26,13 +22,12 @@ function SectionProduct({ product }) {
   const {
     productName, productTypeName, imagePath, productCode, balance,
     description, detail, additionalInformation, warrantyInformation,
+    imagePaths,
   } = product;
+
+  const photos = imagePaths && imagePaths.map((m) => ({ source: m }));
   const classes = useStyles();
-  const imageClasses = classNames(
-    classes.imgRaised,
-    classes.imgCard,
-    classes.imgFluid,
-  );
+
   return (
     <div className={classes.section}>
       <h4 className={classes.title}>
@@ -41,25 +36,17 @@ function SectionProduct({ product }) {
         {' '}
         {productName}
       </h4>
+      <h5>SKU: { productCode }</h5>
+      <h6>{ balance }</h6>
       <div>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={3}>
-            <Card plain>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img
-                  src={imagePath || imagePlaceholder}
-                  alt={productName}
-                  className={imageClasses}
-                />
-              </GridItem>
-              <CardBody>
-                { productCode }
-                <br />
-                { balance }
-              </CardBody>
-            </Card>
+        <GridContainer style={{ padding: '15px' }}>
+          <GridItem xs={12} sm={12} md={12}>
+            <ProductImages images={photos} name={productName} />
+            <br />
+            <br />
+            <br />
           </GridItem>
-          <GridItem xs={12} sm={12} md={9}>
+          <GridItem xs={12} sm={12} md={12}>
             <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
               <ExpansionPanelSummary
                 expanded

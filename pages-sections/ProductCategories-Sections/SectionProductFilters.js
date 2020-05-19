@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import Slider from 'nouislider';
 import { makeStyles } from '@material-ui/core/styles';
