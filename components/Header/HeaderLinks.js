@@ -1,12 +1,12 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-// import Link from 'next/link';
+import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Apps, Business, ContactPhone } from '@material-ui/icons';
-// import CustomDropdown from '../CustomDropdown/CustomDropdown';
+import CustomDropdown from '../CustomDropdown/CustomDropdown';
 import Button from '../CustomButtons/Button';
 import styles from '../../assets/jss/nextjs-material-kit/components/headerLinksStyle';
 
@@ -38,37 +38,27 @@ export default function HeaderLinks(props) {
           Custom Applications
         </Button>
       </ListItem>
-      {/* <ListItem className={classes.listItem}>
+      <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           navDropdown
-          buttonText="Products"
+          buttonText="Contact"
           buttonProps={{
             className: classes.navLink,
             color: 'transparent',
           }}
-          buttonIcon={Apps}
+          buttonIcon={ContactPhone}
           dropdownList={[
-            <Link href="/product-categories">
-              <a className={classes.dropdownLink}>Flexible LED Strip</a>
+            <Link href="/contact-us">
+              <a className={classes.dropdownLink}>Contact Us</a>
             </Link>,
-            <Link href="/product-categories">
-              <a className={classes.dropdownLink}>LED Drivers AND Power Supplies</a>
+            <Link href="/about-us">
+              <a className={classes.dropdownLink}>About Us</a>
             </Link>,
           ]}
         />
-      </ListItem> */}
+      </ListItem>
       {/* <ListItem className={classes.listItem}>
-        <Button
-          href="https://koukia.ca"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <CloudDownload className={classes.icons} /> Custom Applications
-        </Button>
-      </ListItem> */}
-      <ListItem className={classes.listItem}>
         <Button
           href="/contact-us"
           color="transparent"
@@ -89,8 +79,8 @@ export default function HeaderLinks(props) {
           {' '}
           About Us
         </Button>
-      </ListItem>
-      <ListItem className={classes.listItem}>
+      </ListItem> */}
+      {/* <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-twitter"
           title="Follow us on Twitter"
@@ -106,8 +96,8 @@ export default function HeaderLinks(props) {
             <i className={`${classes.socialIcons} fab fa-twitter`} />
           </Button>
         </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
+      </ListItem> */}
+      {/* <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-facebook"
           title="Follow us on Facebook"
@@ -123,7 +113,7 @@ export default function HeaderLinks(props) {
             <i className={`${classes.socialIcons} fab fa-facebook`} />
           </Button>
         </Tooltip>
-      </ListItem>
+      </ListItem> */}
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-tooltip"
@@ -141,7 +131,7 @@ export default function HeaderLinks(props) {
           </Button>
         </Tooltip>
       </ListItem>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <Tooltip
           id="youtube-tooltip"
           title="Subscribe to our Youtube channel"
@@ -157,7 +147,7 @@ export default function HeaderLinks(props) {
             <i className={`${classes.socialIcons} fab fa-youtube`} />
           </Button>
         </Tooltip>
-      </ListItem>
+      </ListItem> */}
     </List>
   );
 }

@@ -5,6 +5,7 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import Icon from '@material-ui/core/Icon';
 import Email from '@material-ui/icons/Email';
 import People from '@material-ui/icons/People';
+import Search from '@material-ui/icons/Search';
 import Header from '../components/Header/Header';
 import HeaderLinks from '../components/Header/HeaderLinks';
 import Footer from '../components/Footer/Footer';
@@ -31,10 +32,38 @@ export default function LoginPage(props) {
   return (
     <div>
       <Header
-        absolute
         color="transparent"
+        routes={dashboardRoutes}
         brand="LED Lights and Parts"
-        rightLinks={<HeaderLinks />}
+        leftLinks={<HeaderLinks />}
+        rightLinks={(
+          <div>
+            <CustomInput
+              white
+              inputRootCustomClasses={classes.inputRootCustomClasses}
+              formControlProps={{
+                className: classes.formControl,
+                width: '100%',
+              }}
+              inputProps={{
+                placeholder: 'Search',
+                inputProps: {
+                  'aria-label': 'Search',
+                  width: '100%',
+                  className: classes.searchInput,
+                },
+              }}
+            />
+            <Button justIcon round color="white">
+              <Search className={classes.searchIcon} />
+            </Button>
+          </div>
+        )}
+        fixed
+        changeColorOnScroll={{
+          height: 400,
+          color: 'white',
+        }}
         {...rest}
       />
       <div

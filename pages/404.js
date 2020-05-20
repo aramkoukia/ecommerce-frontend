@@ -4,6 +4,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 import { Apps } from '@material-ui/icons';
+import Search from '@material-ui/icons/Search';
 import HeaderLinks from '../components/Header/HeaderLinks';
 import Parallax from '../components/Parallax/Parallax';
 import Header from '../components/Header/Header';
@@ -11,6 +12,7 @@ import Footer from '../components/Footer/Footer';
 import SocialLinks from '../components/SocialLinks/SocialLinks';
 import GridContainer from '../components/Grid/GridContainer';
 import GridItem from '../components/Grid/GridItem';
+import CustomInput from '../components/CustomInput/CustomInput';
 import Button from '../components/CustomButtons/Button';
 import styles from '../assets/jss/nextjs-material-kit/pages/profilePage';
 
@@ -27,13 +29,38 @@ export default function _404(props) {
     <div>
       <Header
         color="transparent"
+        routes={dashboardRoutes}
         brand="LED Lights and Parts"
-        rightLinks={<HeaderLinks />}
+        leftLinks={<HeaderLinks />}
+        rightLinks={(
+          <div>
+            <CustomInput
+              white
+              inputRootCustomClasses={classes.inputRootCustomClasses}
+              formControlProps={{
+                className: classes.formControl,
+                width: '100%',
+              }}
+              inputProps={{
+                placeholder: 'Search',
+                inputProps: {
+                  'aria-label': 'Search',
+                  width: '100%',
+                  className: classes.searchInput,
+                },
+              }}
+            />
+            <Button justIcon round color="white">
+              <Search className={classes.searchIcon} />
+            </Button>
+          </div>
+        )}
         fixed
         changeColorOnScroll={{
-          height: 200,
+          height: 400,
           color: 'white',
         }}
+        {...rest}
       />
       <Parallax small filter image={background} />
       <div className={classNames(classes.main, classes.mainRaised)}>

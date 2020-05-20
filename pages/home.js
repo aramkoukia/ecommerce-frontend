@@ -2,6 +2,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
+import Search from '@material-ui/icons/Search';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import GridContainer from '../components/Grid/GridContainer';
@@ -9,6 +10,7 @@ import GridItem from '../components/Grid/GridItem';
 import Button from '../components/CustomButtons/Button';
 import HeaderLinks from '../components/Header/HeaderLinks';
 import Parallax from '../components/Parallax/Parallax';
+import CustomInput from '../components/CustomInput/CustomInput';
 import styles from '../assets/jss/nextjs-material-kit/pages/landingPage';
 import CustomApplicationSection from '../pages-sections/LandingPage-Sections/CustomApplicationSection';
 
@@ -27,7 +29,30 @@ export default function HomePage(props) {
         color="transparent"
         routes={dashboardRoutes}
         brand="LED Lights and Parts"
-        rightLinks={<HeaderLinks />}
+        leftLinks={<HeaderLinks />}
+        rightLinks={(
+          <div>
+            <CustomInput
+              white
+              inputRootCustomClasses={classes.inputRootCustomClasses}
+              formControlProps={{
+                className: classes.formControl,
+                width: '100%',
+              }}
+              inputProps={{
+                placeholder: 'Search',
+                inputProps: {
+                  'aria-label': 'Search',
+                  width: '100%',
+                  className: classes.searchInput,
+                },
+              }}
+            />
+            <Button justIcon round color="white">
+              <Search className={classes.searchIcon} />
+            </Button>
+          </div>
+        )}
         fixed
         changeColorOnScroll={{
           height: 400,

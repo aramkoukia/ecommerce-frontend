@@ -3,13 +3,10 @@ import Link from 'next/link';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
-import Hidden from '@material-ui/core/Hidden';
-import Drawer from '@material-ui/core/Drawer';
 import Menu from '@material-ui/icons/Menu';
+import {
+  TextField, AppBar, Toolbar, Button, Hidden, Drawer, IconButton,
+} from '@material-ui/core';
 // import ProductSearch from '../Product/ProductSearch';
 import styles from '../../assets/jss/nextjs-material-kit/components/headerStyle';
 
@@ -91,6 +88,13 @@ export default function Header(props) {
           </IconButton>
         </Hidden>
       </Toolbar>
+      {/* <TextField
+        className={classes.textfield}
+        placeholder="Search"
+        // value={}
+        onChange={(e) => this.setState({ searchfor: e.target.value })}
+        margin="normal"
+      /> */}
       <Hidden mdUp implementation="js">
         <Drawer
           variant="temporary"

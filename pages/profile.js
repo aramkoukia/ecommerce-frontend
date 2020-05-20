@@ -4,10 +4,12 @@ import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
 import Camera from '@material-ui/icons/Camera';
 import Palette from '@material-ui/icons/Palette';
+import Search from '@material-ui/icons/Search';
 import Favorite from '@material-ui/icons/Favorite';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Button from '../components/CustomButtons/Button';
+import CustomInput from '../components/CustomInput/CustomInput';
 import GridContainer from '../components/Grid/GridContainer';
 import GridItem from '../components/Grid/GridItem';
 import HeaderLinks from '../components/Header/HeaderLinks';
@@ -43,11 +45,35 @@ export default function ProfilePage(props) {
     <div>
       <Header
         color="transparent"
+        routes={dashboardRoutes}
         brand="LED Lights and Parts"
-        rightLinks={<HeaderLinks />}
+        leftLinks={<HeaderLinks />}
+        rightLinks={(
+          <div>
+            <CustomInput
+              white
+              inputRootCustomClasses={classes.inputRootCustomClasses}
+              formControlProps={{
+                className: classes.formControl,
+                width: '100%',
+              }}
+              inputProps={{
+                placeholder: 'Search',
+                inputProps: {
+                  'aria-label': 'Search',
+                  width: '100%',
+                  className: classes.searchInput,
+                },
+              }}
+            />
+            <Button justIcon round color="white">
+              <Search className={classes.searchIcon} />
+            </Button>
+          </div>
+        )}
         fixed
         changeColorOnScroll={{
-          height: 200,
+          height: 400,
           color: 'white',
         }}
         {...rest}

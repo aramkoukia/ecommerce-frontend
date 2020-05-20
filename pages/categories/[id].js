@@ -3,9 +3,11 @@ import React from 'react';
 import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
 import fetch from 'node-fetch';
+import Search from '@material-ui/icons/Search';
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import ProductFilters from '../../components/Product/ProductFilters';
+import CustomInput from '../../components/CustomInput/CustomInput';
 import CategoryNavigation from '../../components/Product/CategoryNavigation';
 import SectionProductsInCategory from '../../pages-sections/ProductCategories-Sections/SectionProductsInCategory';
 import Header from '../../components/Header/Header';
@@ -22,10 +24,34 @@ export default function Products({ products, categories, ...rest }) {
   return (
     <div>
       <Header
-        brand="LED Lights and Parts"
-        rightLinks={<HeaderLinks />}
-        fixed
         color="transparent"
+        routes={dashboardRoutes}
+        brand="LED Lights and Parts"
+        leftLinks={<HeaderLinks />}
+        rightLinks={(
+          <div>
+            <CustomInput
+              white
+              inputRootCustomClasses={classes.inputRootCustomClasses}
+              formControlProps={{
+                className: classes.formControl,
+                width: '100%',
+              }}
+              inputProps={{
+                placeholder: 'Search',
+                inputProps: {
+                  'aria-label': 'Search',
+                  width: '100%',
+                  className: classes.searchInput,
+                },
+              }}
+            />
+            <Button justIcon round color="white">
+              <Search className={classes.searchIcon} />
+            </Button>
+          </div>
+        )}
+        fixed
         changeColorOnScroll={{
           height: 400,
           color: 'white',
@@ -37,7 +63,7 @@ export default function Products({ products, categories, ...rest }) {
         <GridContainer>
           <GridItem xs={12} sm={12} md={3}>
             <CategoryNavigation categories={categories} />
-            <ProductFilters />
+            {/* <ProductFilters /> */}
           </GridItem>
           <GridItem xs={12} sm={12} md={9}>
             <SectionProductsInCategory products={products} />
