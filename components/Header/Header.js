@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
@@ -5,9 +6,8 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Menu from '@material-ui/icons/Menu';
 import {
-  TextField, AppBar, Toolbar, Button, Hidden, Drawer, IconButton,
+  AppBar, Toolbar, Button, Hidden, Drawer, IconButton,
 } from '@material-ui/core';
-// import ProductSearch from '../Product/ProductSearch';
 import styles from '../../assets/jss/nextjs-material-kit/components/headerStyle';
 
 const useStyles = makeStyles(styles);
@@ -15,19 +15,7 @@ const useStyles = makeStyles(styles);
 export default function Header(props) {
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  React.useEffect(() => {
-    if (props.changeColorOnScroll) {
-      window.addEventListener('scroll', headerColorChange);
-    }
-    return function cleanup() {
-      if (props.changeColorOnScroll) {
-        window.removeEventListener('scroll', headerColorChange);
-      }
-    };
-  });
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+
   const headerColorChange = () => {
     const { color, changeColorOnScroll } = props;
     const windowsScrollTop = window.pageYOffset;
@@ -46,6 +34,20 @@ export default function Header(props) {
         .getElementsByTagName('header')[0]
         .classList.remove(classes[changeColorOnScroll.color]);
     }
+  };
+
+  React.useEffect(() => {
+    if (props.changeColorOnScroll) {
+      window.addEventListener('scroll', headerColorChange);
+    }
+    return function cleanup() {
+      if (props.changeColorOnScroll) {
+        window.removeEventListener('scroll', headerColorChange);
+      }
+    };
+  });
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
   };
   const {
     color, rightLinks, leftLinks, brand, fixed, absolute,
@@ -76,7 +78,6 @@ export default function Header(props) {
         </div>
         <Hidden smDown implementation="css">
           {rightLinks}
-          {/* <ProductSearch fullWidth /> */}
         </Hidden>
         <Hidden mdUp>
           <IconButton
@@ -130,12 +131,12 @@ Header.propTypes = {
     'white',
     'rose',
     'dark',
-  ]),
-  rightLinks: PropTypes.node,
-  leftLinks: PropTypes.node,
-  brand: PropTypes.string,
-  fixed: PropTypes.bool,
-  absolute: PropTypes.bool,
+  ]).isRequired,
+  rightLinks: PropTypes.node.isRequired,
+  leftLinks: PropTypes.node.isRequired,
+  brand: PropTypes.string.isRequired,
+  fixed: PropTypes.bool.isRequired,
+  absolute: PropTypes.bool.isRequired,
   // this will cause the sidebar to change the color from
   // props.color (see above) to changeColorOnScroll.color
   // when the window.pageYOffset is heigher or equal to
@@ -155,5 +156,5 @@ Header.propTypes = {
       'rose',
       'dark',
     ]).isRequired,
-  }),
+  }).isRequired,
 };

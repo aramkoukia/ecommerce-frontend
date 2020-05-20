@@ -6,7 +6,8 @@ import fetch from 'node-fetch';
 import Search from '@material-ui/icons/Search';
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
-import ProductFilters from '../../components/Product/ProductFilters';
+// import ProductFilters from '../../components/Product/ProductFilters';
+import Footer from '../../components/Footer/Footer';
 import CustomInput from '../../components/CustomInput/CustomInput';
 import Button from '../../components/CustomButtons/Button';
 import CategoryNavigation from '../../components/Product/CategoryNavigation';
@@ -70,6 +71,7 @@ export default function Products({ products, categories, ...rest }) {
           </GridItem>
         </GridContainer>
       </div>
+      <Footer />
     </div>
   );
 }
