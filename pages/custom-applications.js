@@ -16,8 +16,6 @@ import CustomApplicationSection from '../pages-sections/LandingPage-Sections/Cus
 
 const header = require('../assets/img/nextjs_header.jpg');
 
-const dashboardRoutes = [];
-
 const useStyles = makeStyles(styles);
 
 export default function CustomApplicationsPage(props) {
@@ -27,7 +25,6 @@ export default function CustomApplicationsPage(props) {
     <div>
       <Header
         color="transparent"
-        routes={dashboardRoutes}
         brand="LED Lights and Parts"
         leftLinks={<HeaderLinks />}
         rightLinks={(

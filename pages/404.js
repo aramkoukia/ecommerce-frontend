@@ -29,7 +29,6 @@ export default function _404(props) {
     <div>
       <Header
         color="transparent"
-        routes={dashboardRoutes}
         brand="LED Lights and Parts"
         leftLinks={<HeaderLinks />}
         rightLinks={(

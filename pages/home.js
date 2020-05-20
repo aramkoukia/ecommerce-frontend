@@ -16,8 +16,6 @@ import CustomApplicationSection from '../pages-sections/LandingPage-Sections/Cus
 
 const landingBg = require('../assets/img/landing-bg.jpg');
 
-const dashboardRoutes = [];
-
 const useStyles = makeStyles(styles);
 
 export default function HomePage(props) {
@@ -27,7 +25,6 @@ export default function HomePage(props) {
     <div>
       <Header
         color="transparent"
-        routes={dashboardRoutes}
         brand="LED Lights and Parts"
         leftLinks={<HeaderLinks />}
         rightLinks={(
