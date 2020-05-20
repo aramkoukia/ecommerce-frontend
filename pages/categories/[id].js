@@ -5,7 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import fetch from 'node-fetch';
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
-import SectionProductFilters from '../../pages-sections/ProductCategories-Sections/SectionProductFilters';
+import ProductFilters from '../../components/Product/ProductFilters';
+import CategoryNavigation from '../../components/Product/CategoryNavigation';
 import SectionProductsInCategory from '../../pages-sections/ProductCategories-Sections/SectionProductsInCategory';
 import Header from '../../components/Header/Header';
 import HeaderLinks from '../../components/Header/HeaderLinks';
@@ -16,7 +17,7 @@ const header = require('../../assets/img/nextjs_header.jpg');
 
 const useStyles = makeStyles(styles);
 
-export default function Products({ products, ...rest }) {
+export default function Products({ products, categories, ...rest }) {
   const classes = useStyles();
   return (
     <div>
@@ -35,7 +36,8 @@ export default function Products({ products, ...rest }) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <GridContainer>
           <GridItem xs={12} sm={12} md={3}>
-            <SectionProductFilters />
+            <CategoryNavigation categories={categories} />
+            <ProductFilters />
           </GridItem>
           <GridItem xs={12} sm={12} md={9}>
             <SectionProductsInCategory products={products} />
@@ -58,12 +60,16 @@ export default function Products({ products, ...rest }) {
 
 export async function getServerSideProps({ query }) {
   // export async function getStaticProps({ params }) {
-  const res = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes/${query.id}/products`);
-  const result = await res.json();
-  const products = result.sort((a, b) => a.rank - b.rank);
+  const productsResponse = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes/${query.id}/products`);
+  const productsResult = await productsResponse.json();
+  const products = productsResult.sort((a, b) => a.rank - b.rank);
+  const categoriesResponse = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes`);
+  const categories = await categoriesResponse.json();
+
   return {
     props: {
       products,
+      categories,
     },
   };
 }

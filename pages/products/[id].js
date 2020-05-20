@@ -5,18 +5,19 @@ import { makeStyles } from '@material-ui/core/styles';
 import fetch from 'node-fetch';
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
-import SectionProductFilters from '../../pages-sections/ProductCategories-Sections/SectionProductFilters';
-import SectionProduct from '../../pages-sections/ProductCategories-Sections/SectionProduct';
+import ProductFilters from '../../components/Product/ProductFilters';
+import CategoryNavigation from '../../components/Product/CategoryNavigation';
 import Header from '../../components/Header/Header';
 import HeaderLinks from '../../components/Header/HeaderLinks';
 import Parallax from '../../components/Parallax/Parallax';
 import styles from '../../assets/jss/nextjs-material-kit/pages/components';
+import SectionProduct from '../../pages-sections/ProductCategories-Sections/SectionProduct';
 
 const header = require('../../assets/img/nextjs_header.jpg');
 
 const useStyles = makeStyles(styles);
 
-export default function Product({ product, ...rest }) {
+export default function Product({ product, categories, ...rest }) {
   const classes = useStyles();
   return (
     <div>
@@ -35,7 +36,8 @@ export default function Product({ product, ...rest }) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <GridContainer>
           <GridItem xs={12} sm={12} md={3}>
-            <SectionProductFilters />
+            <CategoryNavigation categories={categories} />
+            <ProductFilters />
           </GridItem>
           <GridItem xs={12} sm={12} md={9}>
             <SectionProduct product={product} />
@@ -61,9 +63,12 @@ export async function getServerSideProps({ query }) {
   // export async function getStaticProps({ params }) {
   const res = await fetch(`${process.env.BASE_API_URL}/api/website/products/${query.id}/detail`);
   const product = await res.json();
+  const categoriesResponse = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes`);
+  const categories = await categoriesResponse.json();  
   return {
     props: {
       product,
+      categories,
     },
   };
 }
