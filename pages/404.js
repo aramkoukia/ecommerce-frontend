@@ -20,7 +20,7 @@ const background = require('../assets/img/profile-bg.jpg');
 
 const useStyles = makeStyles(styles);
 
-export default function _404(props) {
+export default function _404({ ...rest }) {
   const classes = useStyles();
   // componentDidMount() {
   //   Router.push('/product-categories');
