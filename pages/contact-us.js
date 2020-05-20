@@ -6,6 +6,7 @@ import Search from '@material-ui/icons/Search';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import SocialLinks from '../components/SocialLinks/SocialLinks';
+import Button from '../components/CustomButtons/Button';
 import GridContainer from '../components/Grid/GridContainer';
 import GridItem from '../components/Grid/GridItem';
 import HeaderLinks from '../components/Header/HeaderLinks';

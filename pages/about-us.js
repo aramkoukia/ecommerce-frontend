@@ -9,6 +9,7 @@ import GridContainer from '../components/Grid/GridContainer';
 import GridItem from '../components/Grid/GridItem';
 import SocialLinks from '../components/SocialLinks/SocialLinks';
 import HeaderLinks from '../components/Header/HeaderLinks';
+import Button from '../components/CustomButtons/Button';
 import Parallax from '../components/Parallax/Parallax';
 import CustomInput from '../components/CustomInput/CustomInput';
 import logo from '../assets/img/logo.png';

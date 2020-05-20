@@ -10,6 +10,7 @@ import ProductFilters from '../../components/Product/ProductFilters';
 import CategoryNavigation from '../../components/Product/CategoryNavigation';
 import Header from '../../components/Header/Header';
 import CustomInput from '../../components/CustomInput/CustomInput';
+import Button from '../../components/CustomButtons/Button';
 import HeaderLinks from '../../components/Header/HeaderLinks';
 import Parallax from '../../components/Parallax/Parallax';
 import styles from '../../assets/jss/nextjs-material-kit/pages/components';

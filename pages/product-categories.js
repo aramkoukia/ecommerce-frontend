@@ -5,6 +5,7 @@ import fetch from 'node-fetch';
 import { makeStyles } from '@material-ui/core/styles';
 import Search from '@material-ui/icons/Search';
 import Header from '../components/Header/Header';
+import Button from '../components/CustomButtons/Button';
 import HeaderLinks from '../components/Header/HeaderLinks';
 import Footer from '../components/Footer/Footer';
 import GridContainer from '../components/Grid/GridContainer';

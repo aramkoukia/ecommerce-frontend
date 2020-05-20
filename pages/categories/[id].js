@@ -8,6 +8,7 @@ import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import ProductFilters from '../../components/Product/ProductFilters';
 import CustomInput from '../../components/CustomInput/CustomInput';
+import Button from '../../components/CustomButtons/Button';
 import CategoryNavigation from '../../components/Product/CategoryNavigation';
 import SectionProductsInCategory from '../../pages-sections/ProductCategories-Sections/SectionProductsInCategory';
 import Header from '../../components/Header/Header';
