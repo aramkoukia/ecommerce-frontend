@@ -202,8 +202,13 @@ export default function CustomApplicationSection({ customApplications }) {
       </Stepper>
       {activeStep === customApplications.length && (
         <Paper square elevation={0} className={classes.resetContainer}>
-          <Typography>All Done! You should receive this Quote in your email shortly!</Typography>
-          <Button onClick={handleReset} className={classes.button} size="sm">
+          <Typography>
+            All Done!
+          </Typography>
+          <Button color="primary" href="/draft-invoice" className={classes.button}>
+            Get Product List
+          </Button>
+          <Button onClick={handleReset} className={classes.button}>
             Start Another Custom Application
           </Button>
         </Paper>
