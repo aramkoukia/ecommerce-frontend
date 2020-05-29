@@ -103,10 +103,6 @@ const rows = [
   createData('LED Module 5050 Back Lighting 12V 4 LEDs 6000k Pack of 20', '666561545588', 1, 122.56, 122.56),
 ];
 
-function getSteps() {
-  return ['Select Application / Use Case', 'Select Color Temperature', 'Select Lumen', 'Select Length and Height', 'Product List / Quote'];
-}
-
 function getStepContent(step, handleBack, handleNext, label, steps) {
   const classes = useStyles();
   switch (step) {
@@ -422,10 +418,9 @@ function getStepContent(step, handleBack, handleNext, label, steps) {
   }
 }
 
-export default function CustomApplicationSection() {
+export default function CustomApplicationSection({ customApplications }) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
-  const steps = getSteps();
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -443,16 +438,16 @@ export default function CustomApplicationSection() {
     <div className={classes.section}>
       <h2 className={classes.title}>&nbsp;&nbsp;Custom Applications</h2>
       <Stepper activeStep={activeStep} orientation="vertical">
-        {steps.map((label, index) => (
+        {customApplications.map(({ stepTitle }, index) => (
           <Step key={index}>
-            <StepLabel>{label}</StepLabel>
+            <StepLabel>{stepTitle}</StepLabel>
             <StepContent>
-              {getStepContent(index, handleBack, handleNext, label, steps)}
+              {getStepContent(index, handleBack, handleNext, stepTitle, customApplications)}
             </StepContent>
           </Step>
         ))}
       </Stepper>
-      {activeStep === steps.length && (
+      {activeStep === customApplications.length && (
         <Paper square elevation={0} className={classes.resetContainer}>
           <Typography>All Done! You should receive this Quote in your email shortly!</Typography>
           <Button onClick={handleReset} className={classes.button} size="sm">

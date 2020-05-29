@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import classNames from 'classnames';
+import fetch from 'node-fetch';
 import { makeStyles } from '@material-ui/core/styles';
 import Search from '@material-ui/icons/Search';
 import Header from '../components/Header/Header';
@@ -18,9 +19,8 @@ const header = require('../assets/img/nextjs_header.jpg');
 
 const useStyles = makeStyles(styles);
 
-export default function CustomApplicationsPage(props) {
+export default function CustomApplicationsPage({ customApplications, ...rest }) {
   const classes = useStyles();
-  const { ...rest } = props;
   return (
     <div>
       <Header
@@ -61,11 +61,21 @@ export default function CustomApplicationsPage(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
-            <CustomApplicationSection />
+            <CustomApplicationSection customApplications={customApplications} />
           </GridItem>
         </GridContainer>
       </div>
       <Footer />
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await fetch(`${process.env.BASE_API_URL}/api/website/custom-applications`);
+  const customApplications = await res.json();
+  return {
+    props: {
+      customApplications,
+    },
+  };
 }

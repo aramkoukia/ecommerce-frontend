@@ -92,7 +92,7 @@ export async function getServerSideProps({ query }) {
   const res = await fetch(`${process.env.BASE_API_URL}/api/website/products/${query.id}/detail`);
   const product = await res.json();
   const categoriesResponse = await fetch(`${process.env.BASE_API_URL}/api/website/producttypes`);
-  const categories = await categoriesResponse.json();  
+  const categories = await categoriesResponse.json();
   return {
     props: {
       product,
