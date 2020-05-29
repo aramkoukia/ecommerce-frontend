@@ -14,6 +14,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Slider from '@material-ui/core/Slider';
+import CustomInput from '../../components/CustomInput/CustomInput';
 import Button from '../../components/CustomButtons/Button';
 
 const useStyles = makeStyles((theme) => ({
@@ -34,19 +35,6 @@ const useStyles = makeStyles((theme) => ({
     height: 140,
   },
 }));
-
-// function createData(name, code, amount, unitPrice, total) {
-//   return {
-//     name, code, amount, unitPrice, total,
-//   };
-// }
-
-// const rows = [
-//   createData('SMART 12V 12.5A 150W Dimmable SMT-012-150VT', '666561564789', 10, 150.56, 545.08),
-//   createData('FS-3528-3500-60-12-NS 10m (per liner foot)', '666561416294', 6, 350.56, 969.08),
-//   createData('LED Module 5050 Back Lighting 12V 4 LEDs 6000k Pack of 20',
-//  '666561545588', 1, 122.56, 122.56),
-// ];
 
 function getStepContent(step, handleBack, handleNext) {
   const classes = useStyles();
@@ -202,15 +190,38 @@ export default function CustomApplicationSection({ customApplications }) {
       </Stepper>
       {activeStep === customApplications.length && (
         <Paper square elevation={0} className={classes.resetContainer}>
-          <Typography>
-            All Done!
-          </Typography>
-          <Button color="primary" href="/draft-invoice" className={classes.button}>
-            Get Product List
-          </Button>
-          <Button onClick={handleReset} className={classes.button}>
-            Start Another Custom Application
-          </Button>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={12}>
+              <Typography color="success">
+                All Done!
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={12}>
+              <CustomInput
+                inputRootCustomClasses={classes.inputRootCustomClasses}
+                formControlProps={{
+                  className: classes.formControl,
+                }}
+                inputProps={{
+                  placeholder: 'Enter the Email address on your Account',
+                  inputProps: {
+                    'aria-label': 'Enter the Email address on your Account',
+                  },
+                  style: {
+                    width: '600px',
+                  },
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12}>
+              <Button color="primary" href="/draft-invoice" className={classes.button}>
+                Get Product List
+              </Button>
+              <Button onClick={handleReset} className={classes.button}>
+                Start Another Custom Application
+              </Button>
+            </Grid>
+          </Grid>
         </Paper>
       )}
     </div>
