@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import classNames from 'classnames';
+import fetch from 'node-fetch';
 import { makeStyles } from '@material-ui/core/styles';
 import Search from '@material-ui/icons/Search';
 import Header from '../components/Header/Header';
@@ -18,9 +19,8 @@ const landingBg = require('../assets/img/landing-bg.jpg');
 
 const useStyles = makeStyles(styles);
 
-export default function HomePage(props) {
+export default function HomePage({ customApplications, ...rest }) {
   const classes = useStyles();
-  const { ...rest } = props;
   return (
     <div>
       <Header
@@ -83,10 +83,20 @@ export default function HomePage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <CustomApplicationSection />
+          <CustomApplicationSection customApplications={customApplications} />
         </div>
       </div>
       <Footer />
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await fetch(`${process.env.BASE_API_URL}/api/website/custom-applications`);
+  const customApplications = await res.json();
+  return {
+    props: {
+      customApplications,
+    },
+  };
 }
